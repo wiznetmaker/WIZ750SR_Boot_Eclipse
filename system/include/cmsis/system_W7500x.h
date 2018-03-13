@@ -1,52 +1,47 @@
-/**************************************************************************//**
- * @file     system_<Device>.h
- * @brief    CMSIS Cortex-M# Device Peripheral Access Layer Header File for
- *           Device <Device>
- * @version  V3.10
- * @date     23. November 2012
+/*******************************************************************************************************************************************************
+ * Copyright ¡§I 2016 <WIZnet Co.,Ltd.> 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ¢®¡ÆSoftware¢®¡¾), 
+ * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
- * @note
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ * THE SOFTWARE IS PROVIDED ¢®¡ÆAS IS¢®¡¾, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*********************************************************************************************************************************************************/
+/**************************************************************************/
+/**
+ * @file    system_W7500x.h 
+ * @author  IOP Team
+ * @version V1.0.0
+ * @date    01-May-2015
+ * @brief   CMSIS Cortex-M0 Core Peripheral Access Layer Header File for
+ *          Device W7500x
+ ******************************************************************************
  *
- ******************************************************************************/
-/* Copyright (c) 2012 ARM LIMITED
+ * @attention
+ * @par Revision history
+ *    <2015/05/01> 1st Release
+ *
+ * <h2><center>&copy; COPYRIGHT 2015 WIZnet Co.,Ltd.</center></h2>
+ ******************************************************************************
+ */
 
-   All rights reserved.
-   Redistribution and use in source and binary forms, with or without
-   modification, are permitted provided that the following conditions are met:
-   - Redistributions of source code must retain the above copyright
-     notice, this list of conditions and the following disclaimer.
-   - Redistributions in binary form must reproduce the above copyright
-     notice, this list of conditions and the following disclaimer in the
-     documentation and/or other materials provided with the distribution.
-   - Neither the name of ARM nor the names of its contributors may be used
-     to endorse or promote products derived from this software without
-     specific prior written permission.
-   *
-   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
-   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   POSSIBILITY OF SUCH DAMAGE.
-   ---------------------------------------------------------------------------*/
-
-
-#ifndef SYSTEM_Device_H   /* ToDo: replace '<Device>' with your device name */
-#define SYSTEM_Device_H
+#ifndef SYSTEM_W7500x_H   /* ToDo: replace '<Device>' with your device name */
+#define SYSTEM_W7500x_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include <stdint.h>
+#include "W7500x.h"
 
-extern uint32_t SystemCoreClock;     /*!< System Clock Frequency (Core Clock)  */
-
+extern uint32_t SystemCoreClock;         /*!< System Clock Frequency (Core Clock)  */
+extern uint32_t GetSystemClock(void);    /*!< Get System Clock Frequency */
+extern uint32_t GetSourceClock(void);    /*!< Get PLL Source Clock Frequency */
+extern uint32_t GetPLLSource(void);      /*!< Get PLL Source Input; Internal or External */
 
 /**
  * Initialize the system
@@ -60,18 +55,38 @@ extern uint32_t SystemCoreClock;     /*!< System Clock Frequency (Core Clock)  *
 extern void SystemInit (void);
 
 /**
- * Update SystemCoreClock variable
+ * Initialize the system for users custom
  *
  * @param  none
  * @return none
  *
- * @brief  Updates the SystemCoreClock with current core Clock
- *         retrieved from cpu registers.
+ * @brief  Setup the microcontroller system.
+ *         Initialize the System using parameters
  */
-extern void SystemCoreClockUpdate (void);
+extern void SystemInit_User(uint8_t osc_in_sel, uint32_t pll_src_clock, uint32_t system_clock); 
+
+
+/**
+ * Re-Initialize the system clock for users custom
+ *
+ * @param  none
+ * @return none
+ *
+ * @brief  Setup the microcontroller system.
+ *         Re-initialize the System using parameters
+ */
+ extern void SystemCoreClockUpdate_User(uint8_t osc_in_sel, uint32_t pll_src_clock, uint32_t system_clock);
+
+
+
+/*----------------------------------------------------------------------------
+  Define clocks
+ *----------------------------------------------------------------------------*/
+#define EXTERN_XTAL     (8000000UL)     /* External Oscillator Frequency        */
+#define INTERN_XTAL     (8000000UL)     /* Internal Oscillator Frequency         */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* SYSTEM_<Device>_H */
+#endif /* SYSTEM_W7500x_H */

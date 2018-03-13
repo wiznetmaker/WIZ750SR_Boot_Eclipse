@@ -1,80 +1,68 @@
-/**************************************************************************//**
- * @file     system_<Device>.c
- * @brief    CMSIS Cortex-M# Device Peripheral Access Layer Source File for
- *           Device <Device>
- * @version  V3.10
- * @date     23. November 2012
+/*******************************************************************************************************************************************************
+ * Copyright ¡§I 2016 <WIZnet Co.,Ltd.> 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ¢®¡ÆSoftware¢®¡¾), 
+ * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
- * @note
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ * THE SOFTWARE IS PROVIDED ¢®¡ÆAS IS¢®¡¾, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*********************************************************************************************************************************************************/
+/**************************************************************************/
+/**
+ * @file    system_W7500x.c 
+ * @author  IOP Team
+ * @version V1.0.0
+ * @date    25-AUG-2015
+ * @brief   CMSIS Cortex-M0 Core Peripheral Access Layer Source File for
+ *          Device W7500x
+ ******************************************************************************
  *
- ******************************************************************************/
-/* Copyright (c) 2012 ARM LIMITED
-
-   All rights reserved.
-   Redistribution and use in source and binary forms, with or without
-   modification, are permitted provided that the following conditions are met:
-   - Redistributions of source code must retain the above copyright
-     notice, this list of conditions and the following disclaimer.
-   - Redistributions in binary form must reproduce the above copyright
-     notice, this list of conditions and the following disclaimer in the
-     documentation and/or other materials provided with the distribution.
-   - Neither the name of ARM nor the names of its contributors may be used
-     to endorse or promote products derived from this software without
-     specific prior written permission.
-   *
-   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
-   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   POSSIBILITY OF SUCH DAMAGE.
-   ---------------------------------------------------------------------------*/
-
-
-#include <stdint.h>
-#include "W7500x.h"
+ * @attention
+ * @par Revision history
+ *    <2015/05/01> 1st Release
+ *
+ * <h2><center>&copy; COPYRIGHT 2015 WIZnet Co.,Ltd.</center></h2>
+ ******************************************************************************
+ */
+#include "system_W7500x.h"
 
 
 /*----------------------------------------------------------------------------
   DEFINES
  *----------------------------------------------------------------------------*/
-
-/*----------------------------------------------------------------------------
-  Define clocks
- *----------------------------------------------------------------------------*/
-/* ToDo: add here your necessary defines for device initialization
-         following is an example for different system frequencies             */
-#define __HSI             ( 6000000UL)
-#define __XTAL            (12000000UL)    /* Oscillator frequency             */
-#define __SYS_OSC_CLK     (    ___HSI)    /* Main oscillator frequency        */
-
-#define __SYSTEM_CLOCK    (8000000UL)
+//#define SYSCLK_EXTERN_OSC
 
 
 /*----------------------------------------------------------------------------
   Clock Variable definitions
  *----------------------------------------------------------------------------*/
-/* ToDo: initialize SystemCoreClock with the system core clock frequency value
-         achieved after system intitialization.
-         This means system core clock frequency after call to SystemInit()    */
-uint32_t SystemCoreClock = __SYSTEM_CLOCK;  /*!< System Clock Frequency (Core Clock)*/
-
+uint32_t SystemFrequency = 0;    /*!< System Clock Frequency (Core Clock)  */
+uint32_t SourceFrequency = 0;    /*!< PLL Clock Source Frequency           */
 
 /*----------------------------------------------------------------------------
   Clock functions
  *----------------------------------------------------------------------------*/
-void SystemCoreClockUpdate (void)            /* Get Core Clock Frequency      */
+
+/* Get Core Clock Frequency       */
+uint32_t GetSystemClock()
 {
-/* ToDo: add code to calculate the system frequency based upon the current
-         register settings.
-         This function can be used to retrieve the system core clock frequeny
-         after user changed register sittings.                                */
-  SystemCoreClock = __SYSTEM_CLOCK;
+    return SystemFrequency;
+}
+
+/* Get PLL Source Clock Frequency */
+uint32_t GetSourceClock()
+{
+    return SourceFrequency;
+}
+
+/*!< Get PLL Source Input; Internal or External */
+uint32_t GetPLLSource(void)
+{
+    return CRG->PLL_IFSR;
 }
 
 /**
@@ -88,8 +76,106 @@ void SystemCoreClockUpdate (void)            /* Get Core Clock Frequency      */
  */
 void SystemInit (void)
 {
-/* ToDo: add code to initialize the system
-         do not use global variables because this function is called before
-         reaching pre-main. RW section maybe overwritten afterwards.          */
-  SystemCoreClock = __SYSTEM_CLOCK;
+    uint8_t M,N,OD;
+    
+    (*((volatile uint32_t *)(W7500x_TRIM_BGT))) = (*((volatile uint32_t *)(W7500x_INFO_BGT)));
+    (*((volatile uint32_t *)(W7500x_TRIM_OSC))) = (*((volatile uint32_t *)(W7500x_INFO_OSC)));
+
+    // Set PLL input frequency
+#ifdef SYSCLK_EXTERN_OSC
+    CRG->PLL_IFSR = CRG_PLL_IFSR_OCLK;
+#else
+    CRG->PLL_IFSR = CRG_PLL_IFSR_RCLK;
+#endif    
+    OD = (1 << (CRG->PLL_FCR & 0x01)) * (1 << ((CRG->PLL_FCR & 0x02) >> 1));
+    N = (CRG->PLL_FCR >>  8 ) & 0x3F;
+    M = (CRG->PLL_FCR >> 16) & 0x3F;
+
+#ifdef SYSCLK_EXTERN_OSC
+    SystemFrequency = EXTERN_XTAL * M / N * 1 / OD;
+#else
+    SystemFrequency = INTERN_XTAL * M / N * 1 / OD;
+#endif
+}
+
+/**
+ * Initialize the system for users custom
+ *
+ * @param  none
+ * @return uint8_t OSC input selector, Internal or external
+ *         uint32_t PLL clock source frequency (8MHz ~ 24MHz)
+ *                  Internal 8MHz RC oscillator(RCLK) or External oscillator clock (OCLK, 8MHz ~ 24MHz)
+ *         uint32_t Target System clock frequency (8MHz ~ 48MHz)
+ *
+ * @brief  Setup the microcontroller system.
+ *         Initialize the System using parameters
+ *         !! This function do not support clock divide !!
+ */
+//void SystemInit_User(uint32_t pll_ifsr_val, uint32_t xtal_clock, uint32_t pll_fcr_val)
+void SystemInit_User(uint8_t osc_in_sel, uint32_t pll_src_clock, uint32_t system_clock)
+{
+	(*((volatile uint32_t *)(W7500x_TRIM_BGT))) = (*((volatile uint32_t *)(W7500x_INFO_BGT)));
+	(*((volatile uint32_t *)(W7500x_TRIM_OSC))) = (*((volatile uint32_t *)(W7500x_INFO_OSC)));
+	
+	SystemCoreClockUpdate_User(osc_in_sel, pll_src_clock, system_clock);
+}
+
+/**
+ * Re-Initialize the system clock for users custom
+ *
+ * @param  none
+ * @return uint8_t OSC input selector, Internal or external
+ *         uint32_t PLL clock source frequency (8MHz ~ 24MHz)
+ *                  Internal 8MHz RC oscillator(RCLK) or External oscillator clock (OCLK, 8MHz ~ 24MHz)
+ *         uint32_t Target System clock frequency (8MHz ~ 48MHz)
+ *
+ * @brief  Setup the microcontroller system.
+ *         Re-Initialize the System using parameters
+ *         !! This function do not support clock divide !!
+ */
+void SystemCoreClockUpdate_User(uint8_t osc_in_sel, uint32_t pll_src_clock, uint32_t system_clock)
+{
+	uint8_t M,N,OD;
+	uint8_t mul;
+	uint32_t PLL_FCR_DEFAULT = 0x00020100; // Initial CRG->PLL_FCR,
+	uint32_t determined_pll_src;
+	
+	/* CRG Registers Setting */
+	// Set PLL input frequency; Interal OSC (8MHz) or External OSC (8MHz ~ 24MHz)
+	if(osc_in_sel == 1)
+	{
+		CRG->PLL_IFSR = CRG_PLL_IFSR_OCLK; // CLOCK_SOURCE_EXTERNAL
+		determined_pll_src = pll_src_clock;
+	}
+	else
+	{
+		CRG->PLL_IFSR = CRG_PLL_IFSR_RCLK; // CLOCK_SOURCE_INTERNAL
+		determined_pll_src = INTERN_XTAL;
+	}
+	
+	// Calculate SystemFrequency
+	mul = system_clock / determined_pll_src;
+	
+	if(mul <= 1) // Clock source bypass
+	{
+		CRG->PLL_BPR = CRG_PLL_BPR_EN; // PLL clock source bypass register:  Enabled
+		CRG->PLL_FCR = PLL_FCR_DEFAULT;
+		M = N = OD = 1;
+	}
+	else
+	{
+		CRG->PLL_BPR = CRG_PLL_BPR_DIS; // PLL clock source bypass register: Disabled
+		
+		PLL_FCR_DEFAULT &= (0xFFC0FFFF); // 'M' value clear
+		PLL_FCR_DEFAULT |= ((mul & 0x3F) << 16);
+		CRG->PLL_FCR = PLL_FCR_DEFAULT;
+		
+		OD = (1 << (CRG->PLL_FCR & 0x01)) * (1 << ((CRG->PLL_FCR & 0x02) >> 1));
+		N = (CRG->PLL_FCR >>  8 ) & 0x3F;
+		M = (CRG->PLL_FCR >> 16) & 0x3F;
+	}
+	
+	// Update SystemFrequency
+	SourceFrequency = determined_pll_src;
+	SystemFrequency = SourceFrequency * M / N * 1 / OD;
 }
