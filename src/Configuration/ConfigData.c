@@ -43,11 +43,11 @@ void set_DevConfig_to_factory_value(void)
 
 	dev_config.network_info_common.local_ip[0] = 192;
 	dev_config.network_info_common.local_ip[1] = 168;
-	dev_config.network_info_common.local_ip[2] = 11;
-	dev_config.network_info_common.local_ip[3] = 2;
+	dev_config.network_info_common.local_ip[2] = 0;
+	dev_config.network_info_common.local_ip[3] = 123;
 	dev_config.network_info_common.gateway[0] = 192;
 	dev_config.network_info_common.gateway[1] = 168;
-	dev_config.network_info_common.gateway[2] = 11;
+	dev_config.network_info_common.gateway[2] = 0;
 	dev_config.network_info_common.gateway[3] = 1;
 	dev_config.network_info_common.subnet[0] = 255;
 	dev_config.network_info_common.subnet[1] = 255;
@@ -58,8 +58,8 @@ void set_DevConfig_to_factory_value(void)
 	dev_config.network_info[0].state = ST_OPEN;
 	dev_config.network_info[0].remote_ip[0] = 192;
 	dev_config.network_info[0].remote_ip[1] = 168;
-	dev_config.network_info[0].remote_ip[2] = 11;
-	dev_config.network_info[0].remote_ip[3] = 3;
+	dev_config.network_info[0].remote_ip[2] = 0;
+	dev_config.network_info[0].remote_ip[3] = 2;
 	dev_config.network_info[0].local_port = 5000;
 	dev_config.network_info[0].remote_port = 5000;
 	dev_config.network_info[0].inactivity = 0;		// sec, default: NONE

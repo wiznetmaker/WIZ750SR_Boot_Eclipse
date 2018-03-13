@@ -83,7 +83,7 @@ WIZ750SR_Boot.bin: WIZ750SR_Boot.elf
 
 WIZ750SR_Boot.siz: WIZ750SR_Boot.elf
 	@echo 'Invoking: Cross ARM GNU Print Size'
-	arm-none-eabi-size --format=berkeley "WIZ750SR_Boot.elf"
+	arm-none-eabi-size --format=berkeley --totals "WIZ750SR_Boot.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 

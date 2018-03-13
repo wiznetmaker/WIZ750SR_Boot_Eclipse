@@ -51,12 +51,14 @@
 #include "segcp.h"
 #include "configData.h"
 
+#include "loopback.h"
+
 
 /* Private typedef -----------------------------------------------------------*/
 typedef void (*pFunction)(void);
 
 /* Private define ------------------------------------------------------------*/
-//#define _MAIN_DEBUG_	// debugging message enable
+#define _MAIN_DEBUG_	// debugging message enable
 
 // Define for Interrupt Vector Table Remap
 #define BOOT_VEC_BACK_ADDR 		(DEVICE_APP_MAIN_ADDR - SECT_SIZE)
@@ -280,6 +282,7 @@ int main(void)
 	
 	while(1) // main loop
 	{
+#if 1
 		do_segcp();
 		
 		if(dev_config->options.dhcp_use) DHCP_run(); // DHCP client handler for IP renewal
@@ -294,6 +297,18 @@ int main(void)
 		}
 		
 		Time_Counter(); // Counter for replace the timer interrupt
+#else
+		loopback_tcps(0, g_send_buf, 5000);
+		if(flag_check_main_routine)
+		{
+			// Device working indicator: Boot
+			// LEDs blink rapidly (100ms)
+			LED_Toggle(LED1);
+			LED_Toggle(LED2);
+			flag_check_main_routine = 0;
+		}
+		Time_Counter(); // Counter for replace the timer interrupt
+#endif
 	} // End of application main loop
 } // End of main
 

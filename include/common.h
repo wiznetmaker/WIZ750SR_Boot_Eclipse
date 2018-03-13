@@ -7,9 +7,9 @@
 // Product Version			  //
 ////////////////////////////////
 /* Application Firmware Version */
-#define MAJOR_VER			1
-#define MINOR_VER			1
-#define MAINTENANCE_VER		2
+#define MAJOR_VER			7
+#define MINOR_VER			0
+#define MAINTENANCE_VER		0
 
 //#define STR_VERSION_STATUS	"Develop" // or "Stable"
 #define STR_VERSION_STATUS	"Stable"

@@ -506,17 +506,17 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						else dev_config->network_info[0].keepalive_en = tmp_byte;
 						break;
 					case SEGCP_KI:
-						sscanf(param,"%ld", &tmp_long);
+						sprintf(param,"%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].keepalive_wait_time = (uint16_t) tmp_long;
 						break;
 					case SEGCP_KE:
-						sscanf(param,"%ld", &tmp_long);
+						sprintf(param,"%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].keepalive_retry_time = (uint16_t) tmp_long;
 						break;
 					case SEGCP_RI:
-						sscanf(param,"%ld", &tmp_long);
+						sprintf(param,"%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].reconnection = (uint16_t) tmp_long;
 						break;
@@ -619,17 +619,17 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 							}
 							else
 							{
-								sscanf(param, "%s", &dev_config->module_name);
+								sprintf(param, "%s", dev_config->module_name);
 							}
 						}
 						break;
 					case SEGCP_LP:
-						sscanf(param,"%ld", &tmp_long);
+						sprintf(param,"%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].local_port = (uint16_t)tmp_long;
 						break;
 					case SEGCP_RP:
-						sscanf(param,"%ld", &tmp_long);
+						sprintf(param,"%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;                  
 						else dev_config->network_info[0].remote_port = (uint16_t)tmp_long;
 						break;
@@ -651,7 +651,7 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						
 						break;
 					case SEGCP_BR:
-						sscanf(param, "%d", &tmp_int);
+						sprintf(param, "%d", tmp_int);
 						if(param_len > 2 || tmp_int > baud_230400) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->serial_info[0].baud_rate = (uint8_t)tmp_int;
 						break;
@@ -689,17 +689,17 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						}
 						break;
 					case SEGCP_IT:
-						sscanf(param, "%ld", &tmp_long);
+						sprintf(param, "%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].inactivity = (uint16_t)tmp_long;
 						break;
 					case SEGCP_PT:
-						sscanf(param, "%ld", &tmp_long);
+						sprintf(param, "%d", tmp_long);
 						if(tmp_long > 0xFFFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].packing_time = (uint16_t)tmp_long;
 						break;
 					case SEGCP_PS:
-						sscanf(param, "%d", &tmp_int);
+						sprintf(param, "%d", tmp_int);
 						if(param_len > 3 || tmp_int > 0xFF) ret |= SEGCP_RET_ERR_INVALIDPARAM;
 						else dev_config->network_info[0].packing_size = (uint8_t)tmp_int;
 						break;
@@ -710,7 +710,7 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						}
 						else
 						{
-							sscanf(param,"%x", &tmp_int);
+							sprintf(param,"%x", tmp_int);
 							dev_config->network_info[0].packing_delimiter[0] = (uint8_t)tmp_int;
 							
 							if(dev_config->network_info[0].packing_delimiter[0] == 0x00) 
@@ -740,7 +740,7 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						else
 						{
 							if(param[0] == SEGCP_NULL) dev_config->options.pw_connect[0] = 0;
-							else sscanf(param,"%s", &dev_config->options.pw_connect[0]);
+							else sprintf(param,"%s", dev_config->options.pw_connect[0]);
 						}
 						break;
 					case SEGCP_SP:
@@ -751,11 +751,11 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						else
 						{
 							if(param[0] == SEGCP_NULL) dev_config->options.pw_search[0] = 0;
-							else sscanf(param,"%s", &dev_config->options.pw_search);
+							else sprintf(param,"%s", dev_config->options.pw_search);
 						}
 						break;
 					case SEGCP_FW:
-						sscanf(param, "%ld", &tmp_long);
+						sprintf(param, "%d", tmp_long);
 #ifdef __USE_APPBACKUP_AREA__
 						if(tmp_long > (((uint32_t)DEVICE_FWUP_SIZE) & 0x0FFFF)) // 64KByte
 #else
