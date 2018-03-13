@@ -1482,8 +1482,6 @@ Discarded input sections
                 0x00000000        0x8 ./system/src/W7500x/W7500x_uart.o
  .text.S_UART_DeInit
                 0x00000000        0x4 ./system/src/W7500x/W7500x_uart.o
- .text.S_UART_SendData
-                0x00000000       0x14 ./system/src/W7500x/W7500x_uart.o
  .text.S_UART_GetFlagStatus
                 0x00000000       0x10 ./system/src/W7500x/W7500x_uart.o
  .text.S_UART_SetCTRL
@@ -1499,8 +1497,6 @@ Discarded input sections
  .text.UartPuts
                 0x00000000       0x1c ./system/src/W7500x/W7500x_uart.o
  .text.UartGetc
-                0x00000000        0xc ./system/src/W7500x/W7500x_uart.o
- .text.S_UartPutc
                 0x00000000        0xc ./system/src/W7500x/W7500x_uart.o
  .text.S_UartPuts
                 0x00000000       0x18 ./system/src/W7500x/W7500x_uart.o
@@ -2383,10 +2379,6 @@ Discarded input sections
                 0x00000000       0x30 ./src/ioLibrary/Ethernet/wizchip_conf.o
  .text.reg_wizchip_spi_cbfunc
                 0x00000000       0x30 ./src/ioLibrary/Ethernet/wizchip_conf.o
- .text.wizchip_sw_reset
-                0x00000000      0x1b0 ./src/ioLibrary/Ethernet/wizchip_conf.o
- .text.wizchip_init
-                0x00000000       0xa0 ./src/ioLibrary/Ethernet/wizchip_conf.o
  .text.wizchip_clrinterrupt
                 0x00000000       0x20 ./src/ioLibrary/Ethernet/wizchip_conf.o
  .text.wizchip_getinterrupt
@@ -2836,7 +2828,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x1f ./src/PlatformHandler/storageHandler.o
  .debug_macro   0x00000000      0x20f ./src/PlatformHandler/storageHandler.o
  .debug_macro   0x00000000      0x136 ./src/PlatformHandler/storageHandler.o
- .debug_macro   0x00000000      0x1dd ./src/PlatformHandler/storageHandler.o
+ .debug_macro   0x00000000      0x1d7 ./src/PlatformHandler/storageHandler.o
  .debug_macro   0x00000000       0x70 ./src/PlatformHandler/storageHandler.o
  .group         0x00000000        0x8 ./src/PlatformHandler/timerHandler.o
  .group         0x00000000        0x8 ./src/PlatformHandler/timerHandler.o
@@ -2897,7 +2889,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x9e3 ./src/PlatformHandler/timerHandler.o
  .debug_macro   0x00000000       0x34 ./src/PlatformHandler/timerHandler.o
  .debug_macro   0x00000000      0x13c ./src/PlatformHandler/timerHandler.o
- .debug_macro   0x00000000      0x1dd ./src/PlatformHandler/timerHandler.o
+ .debug_macro   0x00000000      0x1d7 ./src/PlatformHandler/timerHandler.o
  .debug_macro   0x00000000       0x16 ./src/PlatformHandler/timerHandler.o
  .debug_macro   0x00000000      0x178 ./src/PlatformHandler/timerHandler.o
  .debug_macro   0x00000000       0x9a ./src/PlatformHandler/timerHandler.o
@@ -2978,7 +2970,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./src/PlatformHandler/uartHandler.o
  .debug_macro   0x00000000      0x9e3 ./src/PlatformHandler/uartHandler.o
  .debug_macro   0x00000000      0x20e ./src/PlatformHandler/uartHandler.o
- .debug_macro   0x00000000      0x1dd ./src/PlatformHandler/uartHandler.o
+ .debug_macro   0x00000000      0x1d7 ./src/PlatformHandler/uartHandler.o
  .debug_macro   0x00000000       0xaa ./src/PlatformHandler/uartHandler.o
  .group         0x00000000        0x8 ./src/Configuration/segcp.o
  .group         0x00000000        0x8 ./src/Configuration/segcp.o
@@ -3051,7 +3043,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x1f ./src/Configuration/segcp.o
  .debug_macro   0x00000000      0x20f ./src/Configuration/segcp.o
  .debug_macro   0x00000000      0x136 ./src/Configuration/segcp.o
- .debug_macro   0x00000000      0x1dd ./src/Configuration/segcp.o
+ .debug_macro   0x00000000      0x1d7 ./src/Configuration/segcp.o
  .debug_macro   0x00000000       0x22 ./src/Configuration/segcp.o
  .debug_macro   0x00000000       0x3b ./src/Configuration/segcp.o
  .debug_macro   0x00000000       0x26 ./src/Configuration/segcp.o
@@ -3282,7 +3274,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./src/ConfigData.o
  .debug_macro   0x00000000      0x9e3 ./src/ConfigData.o
  .debug_macro   0x00000000      0x5c9 ./src/ConfigData.o
- .debug_macro   0x00000000      0x1dd ./src/ConfigData.o
+ .debug_macro   0x00000000      0x1d7 ./src/ConfigData.o
  .debug_macro   0x00000000       0xaa ./src/ConfigData.o
  .debug_macro   0x00000000       0x2e ./src/ConfigData.o
  .debug_macro   0x00000000       0x9a ./src/ConfigData.o
@@ -3349,7 +3341,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xb2 ./src/W7500x_board.o
  .debug_macro   0x00000000       0x34 ./src/W7500x_board.o
  .debug_macro   0x00000000      0x13c ./src/W7500x_board.o
- .debug_macro   0x00000000      0x1dd ./src/W7500x_board.o
+ .debug_macro   0x00000000      0x1d7 ./src/W7500x_board.o
  .debug_macro   0x00000000       0x16 ./src/W7500x_board.o
  .debug_macro   0x00000000      0x214 ./src/W7500x_board.o
  .debug_macro   0x00000000       0xaa ./src/W7500x_board.o
@@ -3398,49 +3390,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./src/W7500x_it.o
  .debug_macro   0x00000000      0x9e3 ./src/W7500x_it.o
  .debug_macro   0x00000000      0x13c ./src/W7500x_it.o
- .debug_macro   0x00000000      0x1dd ./src/W7500x_it.o
+ .debug_macro   0x00000000      0x1d7 ./src/W7500x_it.o
  .debug_macro   0x00000000       0x16 ./src/W7500x_it.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .group         0x00000000        0x8 ./src/_write.o
- .text          0x00000000        0x0 ./src/_write.o
- .data          0x00000000        0x0 ./src/_write.o
- .bss           0x00000000        0x0 ./src/_write.o
- .debug_macro   0x00000000      0x81a ./src/_write.o
- .debug_macro   0x00000000       0x10 ./src/_write.o
- .debug_macro   0x00000000       0x58 ./src/_write.o
- .debug_macro   0x00000000       0x16 ./src/_write.o
- .debug_macro   0x00000000       0x35 ./src/_write.o
- .debug_macro   0x00000000       0xa3 ./src/_write.o
- .debug_macro   0x00000000      0x16d ./src/_write.o
- .debug_macro   0x00000000       0x4a ./src/_write.o
- .debug_macro   0x00000000       0x52 ./src/_write.o
- .debug_macro   0x00000000       0x16 ./src/_write.o
- .debug_macro   0x00000000       0x43 ./src/_write.o
- .debug_macro   0x00000000      0x180 ./src/_write.o
- .debug_macro   0x00000000      0x23b ./src/_write.o
- .debug_macro   0x00000000       0x10 ./src/_write.o
- .debug_macro   0x00000000       0x22 ./src/_write.o
- .debug_macro   0x00000000       0xbd ./src/_write.o
- .debug_macro   0x00000000       0x10 ./src/_write.o
- .debug_macro   0x00000000       0x35 ./src/_write.o
- .debug_macro   0x00000000      0x48e ./src/_write.o
  .group         0x00000000        0x8 ./src/main.o
  .group         0x00000000        0x8 ./src/main.o
  .group         0x00000000        0x8 ./src/main.o
@@ -3529,7 +3480,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x214 ./src/main.o
  .debug_macro   0x00000000      0x5cf ./src/main.o
  .debug_macro   0x00000000      0x13c ./src/main.o
- .debug_macro   0x00000000      0x1dd ./src/main.o
+ .debug_macro   0x00000000      0x1d7 ./src/main.o
  .debug_macro   0x00000000       0xaa ./src/main.o
  .debug_macro   0x00000000       0xb9 ./src/main.o
  .debug_macro   0x00000000       0x28 ./src/main.o
@@ -3539,6 +3490,73 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./src/main.o
  .debug_macro   0x00000000       0x9a ./src/main.o
  .debug_macro   0x00000000      0x178 ./src/main.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .group         0x00000000        0x8 ./src/retarget.o
+ .text          0x00000000        0x0 ./src/retarget.o
+ .data          0x00000000        0x0 ./src/retarget.o
+ .bss           0x00000000        0x0 ./src/retarget.o
+ .debug_macro   0x00000000      0x81a ./src/retarget.o
+ .debug_macro   0x00000000       0x58 ./src/retarget.o
+ .debug_macro   0x00000000       0x16 ./src/retarget.o
+ .debug_macro   0x00000000       0x35 ./src/retarget.o
+ .debug_macro   0x00000000       0xa3 ./src/retarget.o
+ .debug_macro   0x00000000       0x16 ./src/retarget.o
+ .debug_macro   0x00000000       0x97 ./src/retarget.o
+ .debug_macro   0x00000000       0x10 ./src/retarget.o
+ .debug_macro   0x00000000       0xf6 ./src/retarget.o
+ .debug_macro   0x00000000       0x4a ./src/retarget.o
+ .debug_macro   0x00000000       0x52 ./src/retarget.o
+ .debug_macro   0x00000000       0x16 ./src/retarget.o
+ .debug_macro   0x00000000       0x43 ./src/retarget.o
+ .debug_macro   0x00000000      0x180 ./src/retarget.o
+ .debug_macro   0x00000000       0x10 ./src/retarget.o
+ .debug_macro   0x00000000       0x22 ./src/retarget.o
+ .debug_macro   0x00000000       0xbd ./src/retarget.o
+ .debug_macro   0x00000000       0x16 ./src/retarget.o
+ .debug_macro   0x00000000      0x16c ./src/retarget.o
+ .debug_macro   0x00000000       0x22 ./src/retarget.o
+ .debug_macro   0x00000000      0x20f ./src/retarget.o
+ .debug_macro   0x00000000       0x35 ./src/retarget.o
+ .debug_macro   0x00000000       0x26 ./src/retarget.o
+ .debug_macro   0x00000000      0x30d ./src/retarget.o
+ .debug_macro   0x00000000       0x10 ./src/retarget.o
+ .debug_macro   0x00000000      0x9e3 ./src/retarget.o
+ .debug_macro   0x00000000      0x20e ./src/retarget.o
+ .debug_macro   0x00000000      0x13c ./src/retarget.o
+ .debug_macro   0x00000000       0x35 ./src/retarget.o
+ .debug_macro   0x00000000       0x10 ./src/retarget.o
+ .debug_macro   0x00000000      0x120 ./src/retarget.o
  .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_udivsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_udivsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_dvmd_tls.o)
@@ -3973,8 +3991,8 @@ LOAD ./src/Callback/dhcp_cb.o
 LOAD ./src/ConfigData.o
 LOAD ./src/W7500x_board.o
 LOAD ./src/W7500x_it.o
-LOAD ./src/_write.o
 LOAD ./src/main.o
+LOAD ./src/retarget.o
 LOAD c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libstdc++_s.a
 LOAD c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libm.a
 START GROUP
@@ -4019,10 +4037,10 @@ END GROUP
 
 .inits          0x00000214       0x28
                 0x00000214                __data_regions_array_start = .
-                0x00000214        0x4 LONG 0x7180 LOADADDR (.data)
+                0x00000214        0x4 LONG 0x7360 LOADADDR (.data)
                 0x00000218        0x4 LONG 0x20000000 ADDR (.data)
                 0x0000021c        0x4 LONG 0x200001cc (ADDR (.data) + SIZEOF (.data))
-                0x00000220        0x4 LONG 0x7180 LOADADDR (.data_CCMRAM)
+                0x00000220        0x4 LONG 0x7360 LOADADDR (.data_CCMRAM)
                 0x00000224        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x00000228        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x0000022c                __data_regions_array_end = .
@@ -4054,7 +4072,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x0000023c     0x6f44
+.text           0x0000023c     0x7124
  *(.text .text.*)
  .text._exit    0x0000023c        0x4 ./system/src/newlib/_exit.o
                 0x0000023c                _exit
@@ -4132,682 +4150,695 @@ END GROUP
  .text.S_UART_Init
                 0x00000770       0x18 ./system/src/W7500x/W7500x_uart.o
                 0x00000770                S_UART_Init
+ .text.S_UART_SendData
+                0x00000788       0x14 ./system/src/W7500x/W7500x_uart.o
+                0x00000788                S_UART_SendData
  .text.S_UART_ReceiveData
-                0x00000788        0xc ./system/src/W7500x/W7500x_uart.o
-                0x00000788                S_UART_ReceiveData
+                0x0000079c        0xc ./system/src/W7500x/W7500x_uart.o
+                0x0000079c                S_UART_ReceiveData
+ .text.S_UartPutc
+                0x000007a8        0xc ./system/src/W7500x/W7500x_uart.o
+                0x000007a8                S_UartPutc
  .text.S_UartGetc
-                0x00000794       0x18 ./system/src/W7500x/W7500x_uart.o
-                0x00000794                S_UartGetc
+                0x000007b4       0x18 ./system/src/W7500x/W7500x_uart.o
+                0x000007b4                S_UartGetc
  .text.WIZCHIP_READ
-                0x000007ac        0x8 ./system/src/W7500x/W7500x_wztoe.o
-                0x000007ac                WIZCHIP_READ
+                0x000007cc        0x8 ./system/src/W7500x/W7500x_wztoe.o
+                0x000007cc                WIZCHIP_READ
  .text.WIZCHIP_WRITE
-                0x000007b4        0x4 ./system/src/W7500x/W7500x_wztoe.o
-                0x000007b4                WIZCHIP_WRITE
+                0x000007d4        0x4 ./system/src/W7500x/W7500x_wztoe.o
+                0x000007d4                WIZCHIP_WRITE
  .text.WIZCHIP_READ_BUF
-                0x000007b8       0x1c ./system/src/W7500x/W7500x_wztoe.o
-                0x000007b8                WIZCHIP_READ_BUF
+                0x000007d8       0x1c ./system/src/W7500x/W7500x_wztoe.o
+                0x000007d8                WIZCHIP_READ_BUF
  .text.WIZCHIP_WRITE_BUF
-                0x000007d4       0x1c ./system/src/W7500x/W7500x_wztoe.o
-                0x000007d4                WIZCHIP_WRITE_BUF
+                0x000007f4       0x1c ./system/src/W7500x/W7500x_wztoe.o
+                0x000007f4                WIZCHIP_WRITE_BUF
  .text.wiz_send_data
-                0x000007f0       0x38 ./system/src/W7500x/W7500x_wztoe.o
-                0x000007f0                wiz_send_data
+                0x00000810       0x38 ./system/src/W7500x/W7500x_wztoe.o
+                0x00000810                wiz_send_data
  .text.wiz_recv_data
-                0x00000828       0x38 ./system/src/W7500x/W7500x_wztoe.o
-                0x00000828                wiz_recv_data
+                0x00000848       0x38 ./system/src/W7500x/W7500x_wztoe.o
+                0x00000848                wiz_recv_data
  .text.wiz_recv_ignore
-                0x00000860       0x30 ./system/src/W7500x/W7500x_wztoe.o
-                0x00000860                wiz_recv_ignore
+                0x00000880       0x30 ./system/src/W7500x/W7500x_wztoe.o
+                0x00000880                wiz_recv_ignore
  .text.output_MDIO
-                0x00000890       0x5c ./src/ioLibrary/MDIO/W7500x_miim.o
-                0x00000890                output_MDIO
+                0x000008b0       0x5c ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x000008b0                output_MDIO
  .text.input_MDIO
-                0x000008ec       0x48 ./src/ioLibrary/MDIO/W7500x_miim.o
-                0x000008ec                input_MDIO
+                0x0000090c       0x48 ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x0000090c                input_MDIO
  .text.turnaround_MDIO
-                0x00000934       0x38 ./src/ioLibrary/MDIO/W7500x_miim.o
-                0x00000934                turnaround_MDIO
+                0x00000954       0x38 ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x00000954                turnaround_MDIO
  .text.idle_MDIO
-                0x0000096c       0x30 ./src/ioLibrary/MDIO/W7500x_miim.o
-                0x0000096c                idle_MDIO
- .text.phy_id   0x0000099c       0x70 ./src/ioLibrary/MDIO/W7500x_miim.o
-                0x0000099c                phy_id
+                0x0000098c       0x30 ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x0000098c                idle_MDIO
+ .text.phy_id   0x000009bc       0x70 ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x000009bc                phy_id
  .text.mdio_init
-                0x00000a0c       0x58 ./src/ioLibrary/MDIO/W7500x_miim.o
-                0x00000a0c                mdio_init
+                0x00000a2c       0x58 ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x00000a2c                mdio_init
  .text.default_ip_assign
-                0x00000a64       0xa8 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000a64                default_ip_assign
+                0x00000a84       0xa8 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000a84                default_ip_assign
  .text.default_ip_update
-                0x00000b0c       0x6c ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000b0c                default_ip_update
+                0x00000b2c       0x6c ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000b2c                default_ip_update
  .text.default_ip_conflict
-                0x00000b78       0x68 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000b78                default_ip_conflict
+                0x00000b98       0x68 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000b98                default_ip_conflict
  .text.reg_dhcp_cbfunc
-                0x00000be0       0x48 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000be0                reg_dhcp_cbfunc
+                0x00000c00       0x48 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000c00                reg_dhcp_cbfunc
  .text.makeDHCPMSG
-                0x00000c28       0xd8 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000c28                makeDHCPMSG
+                0x00000c48       0xd8 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000c48                makeDHCPMSG
  .text.send_DHCP_DISCOVER
-                0x00000d00      0x15c ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000d00                send_DHCP_DISCOVER
+                0x00000d20      0x15c ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000d20                send_DHCP_DISCOVER
  .text.send_DHCP_REQUEST
-                0x00000e5c      0x220 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00000e5c                send_DHCP_REQUEST
+                0x00000e7c      0x220 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00000e7c                send_DHCP_REQUEST
  .text.send_DHCP_DECLINE
-                0x0000107c      0x104 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x0000107c                send_DHCP_DECLINE
+                0x0000109c      0x104 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x0000109c                send_DHCP_DECLINE
  .text.parseDHCPMSG
-                0x00001180      0x180 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00001180                parseDHCPMSG
+                0x000011a0      0x180 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000011a0                parseDHCPMSG
  .text.DHCP_stop
-                0x00001300       0x1c ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00001300                DHCP_stop
+                0x00001320       0x1c ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00001320                DHCP_stop
  .text.check_DHCP_leasedIP
-                0x0000131c       0x6c ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x0000131c                check_DHCP_leasedIP
+                0x0000133c       0x6c ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x0000133c                check_DHCP_leasedIP
  .text.reset_DHCP_timeout
-                0x00001388       0x20 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00001388                reset_DHCP_timeout
+                0x000013a8       0x20 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000013a8                reset_DHCP_timeout
  .text.check_DHCP_timeout
-                0x000013a8       0x98 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x000013a8                check_DHCP_timeout
+                0x000013c8       0x98 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000013c8                check_DHCP_timeout
  .text.DHCP_run
-                0x00001440      0x1d0 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00001440                DHCP_run
+                0x00001460      0x1d0 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00001460                DHCP_run
  .text.DHCP_init
-                0x00001610      0x17c ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x00001610                DHCP_init
+                0x00001630      0x17c ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00001630                DHCP_init
  .text.DHCP_time_handler
-                0x0000178c       0x10 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x0000178c                DHCP_time_handler
+                0x000017ac       0x10 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000017ac                DHCP_time_handler
  .text.getIPfromDHCP
-                0x0000179c       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x0000179c                getIPfromDHCP
+                0x000017bc       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000017bc                getIPfromDHCP
  .text.getGWfromDHCP
-                0x000017b4       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x000017b4                getGWfromDHCP
+                0x000017d4       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000017d4                getGWfromDHCP
  .text.getSNfromDHCP
-                0x000017cc       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x000017cc                getSNfromDHCP
+                0x000017ec       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000017ec                getSNfromDHCP
  .text.getDNSfromDHCP
-                0x000017e4       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x000017e4                getDNSfromDHCP
+                0x00001804       0x18 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00001804                getDNSfromDHCP
  .text.getDHCPLeasetime
-                0x000017fc        0xc ./src/ioLibrary/Internet/DHCP/dhcp.o
-                0x000017fc                getDHCPLeasetime
- .text.close    0x00001808       0x74 ./src/ioLibrary/Ethernet/socket.o
-                0x00001808                close
- .text.socket   0x0000187c      0x118 ./src/ioLibrary/Ethernet/socket.o
-                0x0000187c                socket
- .text.listen   0x00001994       0x74 ./src/ioLibrary/Ethernet/socket.o
-                0x00001994                listen
+                0x0000181c        0xc ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x0000181c                getDHCPLeasetime
+ .text.close    0x00001828       0x74 ./src/ioLibrary/Ethernet/socket.o
+                0x00001828                close
+ .text.socket   0x0000189c      0x118 ./src/ioLibrary/Ethernet/socket.o
+                0x0000189c                socket
+ .text.listen   0x000019b4       0x74 ./src/ioLibrary/Ethernet/socket.o
+                0x000019b4                listen
  .text.disconnect
-                0x00001a08       0x94 ./src/ioLibrary/Ethernet/socket.o
-                0x00001a08                disconnect
- .text.send     0x00001a9c      0x148 ./src/ioLibrary/Ethernet/socket.o
-                0x00001a9c                send
- .text.recv     0x00001be4      0x108 ./src/ioLibrary/Ethernet/socket.o
-                0x00001be4                recv
- .text.sendto   0x00001cec      0x18c ./src/ioLibrary/Ethernet/socket.o
-                0x00001cec                sendto
+                0x00001a28       0x94 ./src/ioLibrary/Ethernet/socket.o
+                0x00001a28                disconnect
+ .text.send     0x00001abc      0x148 ./src/ioLibrary/Ethernet/socket.o
+                0x00001abc                send
+ .text.recv     0x00001c04      0x108 ./src/ioLibrary/Ethernet/socket.o
+                0x00001c04                recv
+ .text.sendto   0x00001d0c      0x18c ./src/ioLibrary/Ethernet/socket.o
+                0x00001d0c                sendto
  .text.recvfrom
-                0x00001e78      0x204 ./src/ioLibrary/Ethernet/socket.o
-                0x00001e78                recvfrom
+                0x00001e98      0x204 ./src/ioLibrary/Ethernet/socket.o
+                0x00001e98                recvfrom
+ .text.wizchip_sw_reset
+                0x0000209c      0x1b0 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x0000209c                wizchip_sw_reset
+ .text.wizchip_init
+                0x0000224c       0xa0 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x0000224c                wizchip_init
  .text.wizchip_setnetinfo
-                0x0000207c      0x100 ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x0000207c                wizchip_setnetinfo
+                0x000022ec      0x100 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x000022ec                wizchip_setnetinfo
  .text.wizchip_getnetinfo
-                0x0000217c      0x100 ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x0000217c                wizchip_getnetinfo
+                0x000023ec      0x100 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x000023ec                wizchip_getnetinfo
  .text.wizchip_setnetmode
-                0x0000227c       0x2c ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x0000227c                wizchip_setnetmode
+                0x000024ec       0x2c ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x000024ec                wizchip_setnetmode
  .text.wizchip_getnetmode
-                0x000022a8       0x10 ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x000022a8                wizchip_getnetmode
+                0x00002518       0x10 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x00002518                wizchip_getnetmode
  .text.wizchip_settimeout
-                0x000022b8       0x1c ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x000022b8                wizchip_settimeout
+                0x00002528       0x1c ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x00002528                wizchip_settimeout
  .text.wizchip_gettimeout
-                0x000022d4       0x1c ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x000022d4                wizchip_gettimeout
+                0x00002544       0x1c ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x00002544                wizchip_gettimeout
  .text.ctlnetwork
-                0x000022f0       0x54 ./src/ioLibrary/Ethernet/wizchip_conf.o
-                0x000022f0                ctlnetwork
+                0x00002560       0x54 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x00002560                ctlnetwork
  .text.device_set_factory_default
-                0x00002344        0xc ./src/PlatformHandler/deviceHandler.o
-                0x00002344                device_set_factory_default
+                0x000025b4        0xc ./src/PlatformHandler/deviceHandler.o
+                0x000025b4                device_set_factory_default
  .text.device_socket_termination
-                0x00002350       0x2c ./src/PlatformHandler/deviceHandler.o
-                0x00002350                device_socket_termination
+                0x000025c0       0x2c ./src/PlatformHandler/deviceHandler.o
+                0x000025c0                device_socket_termination
  .text.device_reboot
-                0x0000237c       0x20 ./src/PlatformHandler/deviceHandler.o
-                0x0000237c                device_reboot
+                0x000025ec       0x20 ./src/PlatformHandler/deviceHandler.o
+                0x000025ec                device_reboot
  .text.get_firmware_from_network
-                0x0000239c      0x160 ./src/PlatformHandler/deviceHandler.o
-                0x0000239c                get_firmware_from_network
+                0x0000260c      0x160 ./src/PlatformHandler/deviceHandler.o
+                0x0000260c                get_firmware_from_network
  .text.device_timer_msec
-                0x000024fc       0xa0 ./src/PlatformHandler/deviceHandler.o
-                0x000024fc                device_timer_msec
+                0x0000276c       0xa0 ./src/PlatformHandler/deviceHandler.o
+                0x0000276c                device_timer_msec
  .text.reset_fw_update_timer
-                0x0000259c       0x38 ./src/PlatformHandler/deviceHandler.o
-                0x0000259c                reset_fw_update_timer
+                0x0000280c       0x38 ./src/PlatformHandler/deviceHandler.o
+                0x0000280c                reset_fw_update_timer
  .text.device_firmware_update
-                0x000025d4      0x284 ./src/PlatformHandler/deviceHandler.o
-                0x000025d4                device_firmware_update
+                0x00002844      0x284 ./src/PlatformHandler/deviceHandler.o
+                0x00002844                device_firmware_update
  .text.read_flash
-                0x00002858       0x18 ./src/PlatformHandler/flashHandler.o
-                0x00002858                read_flash
- .text.DO_IAP   0x00002870       0x20 ./src/PlatformHandler/flashHandler.o
-                0x00002870                DO_IAP
+                0x00002ac8       0x18 ./src/PlatformHandler/flashHandler.o
+                0x00002ac8                read_flash
+ .text.DO_IAP   0x00002ae0       0x20 ./src/PlatformHandler/flashHandler.o
+                0x00002ae0                DO_IAP
  .text.erase_flash_sector
-                0x00002890       0x4c ./src/PlatformHandler/flashHandler.o
-                0x00002890                erase_flash_sector
+                0x00002b00       0x4c ./src/PlatformHandler/flashHandler.o
+                0x00002b00                erase_flash_sector
  .text.erase_flash_block
-                0x000028dc       0x1c ./src/PlatformHandler/flashHandler.o
-                0x000028dc                erase_flash_block
+                0x00002b4c       0x1c ./src/PlatformHandler/flashHandler.o
+                0x00002b4c                erase_flash_block
  .text.write_flash
-                0x000028f8       0x60 ./src/PlatformHandler/flashHandler.o
-                0x000028f8                write_flash
+                0x00002b68       0x60 ./src/PlatformHandler/flashHandler.o
+                0x00002b68                write_flash
  .text.read_storage
-                0x00002958       0x58 ./src/PlatformHandler/storageHandler.o
-                0x00002958                read_storage
+                0x00002bc8       0x58 ./src/PlatformHandler/storageHandler.o
+                0x00002bc8                read_storage
  .text.erase_storage
-                0x000029b0       0x70 ./src/PlatformHandler/storageHandler.o
-                0x000029b0                erase_storage
+                0x00002c20       0x70 ./src/PlatformHandler/storageHandler.o
+                0x00002c20                erase_storage
  .text.write_storage
-                0x00002a20       0x68 ./src/PlatformHandler/storageHandler.o
-                0x00002a20                write_storage
+                0x00002c90       0x68 ./src/PlatformHandler/storageHandler.o
+                0x00002c90                write_storage
  .text.Time_Counter_Configuration
-                0x00002a88        0xc ./src/PlatformHandler/timerHandler.o
-                0x00002a88                Time_Counter_Configuration
+                0x00002cf8        0xc ./src/PlatformHandler/timerHandler.o
+                0x00002cf8                Time_Counter_Configuration
  .text.Timer_IRQ_Handler
-                0x00002a94       0x98 ./src/PlatformHandler/timerHandler.o
-                0x00002a94                Timer_IRQ_Handler
+                0x00002d04       0x98 ./src/PlatformHandler/timerHandler.o
+                0x00002d04                Timer_IRQ_Handler
  .text.Time_Counter
-                0x00002b2c       0x20 ./src/PlatformHandler/timerHandler.o
-                0x00002b2c                Time_Counter
+                0x00002d9c       0x20 ./src/PlatformHandler/timerHandler.o
+                0x00002d9c                Time_Counter
  .text.set_phylink_time_check
-                0x00002b4c        0x4 ./src/PlatformHandler/timerHandler.o
-                0x00002b4c                set_phylink_time_check
+                0x00002dbc        0x4 ./src/PlatformHandler/timerHandler.o
+                0x00002dbc                set_phylink_time_check
  .text.UART2_Configuration
-                0x00002b50        0xc ./src/PlatformHandler/uartHandler.o
-                0x00002b50                UART2_Configuration
+                0x00002dc0        0xc ./src/PlatformHandler/uartHandler.o
+                0x00002dc0                UART2_Configuration
  .text.parse_SEGCP
-                0x00002b5c       0x98 ./src/Configuration/segcp.o
-                0x00002b5c                parse_SEGCP
+                0x00002dcc       0x98 ./src/Configuration/segcp.o
+                0x00002dcc                parse_SEGCP
  .text.proc_SEGCP
-                0x00002bf4      0xc24 ./src/Configuration/segcp.o
-                0x00002bf4                proc_SEGCP
+                0x00002e64      0xc24 ./src/Configuration/segcp.o
+                0x00002e64                proc_SEGCP
  .text.proc_SEGCP_udp
-                0x00003818      0x1ac ./src/Configuration/segcp.o
-                0x00003818                proc_SEGCP_udp
+                0x00003a88      0x1ac ./src/Configuration/segcp.o
+                0x00003a88                proc_SEGCP_udp
  .text.do_segcp
-                0x000039c4       0x90 ./src/Configuration/segcp.o
-                0x000039c4                do_segcp
+                0x00003c34       0x90 ./src/Configuration/segcp.o
+                0x00003c34                do_segcp
  .text.segcp_timer_msec
-                0x00003a54       0x54 ./src/Configuration/segcp.o
-                0x00003a54                segcp_timer_msec
+                0x00003cc4       0x54 ./src/Configuration/segcp.o
+                0x00003cc4                segcp_timer_msec
  .text.is_ipaddr
-                0x00003aa8       0xc4 ./src/Configuration/util.o
-                0x00003aa8                is_ipaddr
+                0x00003d18       0xc4 ./src/Configuration/util.o
+                0x00003d18                is_ipaddr
  .text.is_hexstr
-                0x00003b6c       0x34 ./src/Configuration/util.o
-                0x00003b6c                is_hexstr
- .text.is_hex   0x00003ba0       0x38 ./src/Configuration/util.o
-                0x00003ba0                is_hex
+                0x00003ddc       0x34 ./src/Configuration/util.o
+                0x00003ddc                is_hexstr
+ .text.is_hex   0x00003e10       0x38 ./src/Configuration/util.o
+                0x00003e10                is_hex
  .text.str_to_hex
-                0x00003bd8       0x64 ./src/Configuration/util.o
-                0x00003bd8                str_to_hex
+                0x00003e48       0x64 ./src/Configuration/util.o
+                0x00003e48                str_to_hex
  .text.is_macaddr
-                0x00003c3c       0x84 ./src/Configuration/util.o
-                0x00003c3c                is_macaddr
+                0x00003eac       0x84 ./src/Configuration/util.o
+                0x00003eac                is_macaddr
  .text.w7500x_dhcp_assign
-                0x00003cc0       0x90 ./src/Callback/dhcp_cb.o
-                0x00003cc0                w7500x_dhcp_assign
+                0x00003f30       0x90 ./src/Callback/dhcp_cb.o
+                0x00003f30                w7500x_dhcp_assign
  .text.w7500x_dhcp_conflict
-                0x00003d50        0x4 ./src/Callback/dhcp_cb.o
-                0x00003d50                w7500x_dhcp_conflict
+                0x00003fc0        0x4 ./src/Callback/dhcp_cb.o
+                0x00003fc0                w7500x_dhcp_conflict
  .text.get_DevConfig_pointer
-                0x00003d54        0x8 ./src/ConfigData.o
-                0x00003d54                get_DevConfig_pointer
+                0x00003fc4        0x8 ./src/ConfigData.o
+                0x00003fc4                get_DevConfig_pointer
  .text.set_DevConfig_to_factory_value
-                0x00003d5c      0x208 ./src/ConfigData.o
-                0x00003d5c                set_DevConfig_to_factory_value
+                0x00003fcc      0x208 ./src/ConfigData.o
+                0x00003fcc                set_DevConfig_to_factory_value
  .text.load_DevConfig_from_storage
-                0x00003f64       0x74 ./src/ConfigData.o
-                0x00003f64                load_DevConfig_from_storage
+                0x000041d4       0x74 ./src/ConfigData.o
+                0x000041d4                load_DevConfig_from_storage
  .text.save_DevConfig_to_storage
-                0x00003fd8       0x80 ./src/ConfigData.o
-                0x00003fd8                save_DevConfig_to_storage
+                0x00004248       0x14 ./src/ConfigData.o
+                0x00004248                save_DevConfig_to_storage
  .text.get_DevConfig_value
-                0x00004058        0x8 ./src/ConfigData.o
-                0x00004058                get_DevConfig_value
+                0x0000425c        0x8 ./src/ConfigData.o
+                0x0000425c                get_DevConfig_value
  .text.set_DevConfig_value
-                0x00004060        0x8 ./src/ConfigData.o
-                0x00004060                set_DevConfig_value
+                0x00004264        0x8 ./src/ConfigData.o
+                0x00004264                set_DevConfig_value
  .text.display_Net_Info
-                0x00004068      0x130 ./src/ConfigData.o
-                0x00004068                display_Net_Info
+                0x0000426c      0x130 ./src/ConfigData.o
+                0x0000426c                display_Net_Info
  .text.Net_Conf
-                0x00004198       0x70 ./src/ConfigData.o
-                0x00004198                Net_Conf
+                0x0000439c       0x70 ./src/ConfigData.o
+                0x0000439c                Net_Conf
  .text.PHY_Init
-                0x00004208       0x34 ./src/W7500x_board.o
+                0x0000440c       0x34 ./src/W7500x_board.o
  .text.Supervisory_IC_Init
-                0x0000423c       0x14 ./src/W7500x_board.o
-                0x0000423c                Supervisory_IC_Init
+                0x00004440       0x14 ./src/W7500x_board.o
+                0x00004440                Supervisory_IC_Init
  .text.init_phylink_in_pin
-                0x00004250       0x14 ./src/W7500x_board.o
-                0x00004250                init_phylink_in_pin
+                0x00004454       0x14 ./src/W7500x_board.o
+                0x00004454                init_phylink_in_pin
  .text.init_hw_trig_pin
-                0x00004264       0x18 ./src/W7500x_board.o
-                0x00004264                init_hw_trig_pin
+                0x00004468       0x18 ./src/W7500x_board.o
+                0x00004468                init_hw_trig_pin
  .text.get_hw_trig_pin
-                0x0000427c       0x2c ./src/W7500x_board.o
-                0x0000427c                get_hw_trig_pin
+                0x00004480       0x2c ./src/W7500x_board.o
+                0x00004480                get_hw_trig_pin
  .text.init_uart_if_sel_pin
-                0x000042a8       0x14 ./src/W7500x_board.o
-                0x000042a8                init_uart_if_sel_pin
+                0x000044ac       0x14 ./src/W7500x_board.o
+                0x000044ac                init_uart_if_sel_pin
  .text.get_uart_if_sel_pin
-                0x000042bc       0x10 ./src/W7500x_board.o
-                0x000042bc                get_uart_if_sel_pin
+                0x000044c0       0x10 ./src/W7500x_board.o
+                0x000044c0                get_uart_if_sel_pin
  .text.init_boot_entry_pin
-                0x000042cc       0x1c ./src/W7500x_board.o
-                0x000042cc                init_boot_entry_pin
+                0x000044d0       0x1c ./src/W7500x_board.o
+                0x000044d0                init_boot_entry_pin
  .text.get_boot_entry_pin
-                0x000042e8       0x10 ./src/W7500x_board.o
-                0x000042e8                get_boot_entry_pin
+                0x000044ec       0x10 ./src/W7500x_board.o
+                0x000044ec                get_boot_entry_pin
  .text.LED_Init
-                0x000042f8       0x50 ./src/W7500x_board.o
-                0x000042f8                LED_Init
+                0x000044fc       0x50 ./src/W7500x_board.o
+                0x000044fc                LED_Init
  .text.W7500x_Board_Init
-                0x00004348       0x30 ./src/W7500x_board.o
-                0x00004348                W7500x_Board_Init
- .text.LED_On   0x00004378       0x24 ./src/W7500x_board.o
-                0x00004378                LED_On
+                0x0000454c       0x30 ./src/W7500x_board.o
+                0x0000454c                W7500x_Board_Init
+ .text.LED_On   0x0000457c       0x24 ./src/W7500x_board.o
+                0x0000457c                LED_On
  .text.LED_Toggle
-                0x0000439c       0x20 ./src/W7500x_board.o
-                0x0000439c                LED_Toggle
+                0x000045a0       0x20 ./src/W7500x_board.o
+                0x000045a0                LED_Toggle
  .text.NMI_Handler
-                0x000043bc        0x4 ./src/W7500x_it.o
-                0x000043bc                NMI_Handler
+                0x000045c0        0x4 ./src/W7500x_it.o
+                0x000045c0                NMI_Handler
  .text.HardFault_Handler
-                0x000043c0        0x4 ./src/W7500x_it.o
-                0x000043c0                HardFault_Handler
+                0x000045c4        0x4 ./src/W7500x_it.o
+                0x000045c4                HardFault_Handler
  .text.SVC_Handler
-                0x000043c4        0x4 ./src/W7500x_it.o
-                0x000043c4                SVC_Handler
+                0x000045c8        0x4 ./src/W7500x_it.o
+                0x000045c8                SVC_Handler
  .text.PendSV_Handler
-                0x000043c8        0x4 ./src/W7500x_it.o
-                0x000043c8                PendSV_Handler
+                0x000045cc        0x4 ./src/W7500x_it.o
+                0x000045cc                PendSV_Handler
  .text.SysTick_Handler
-                0x000043cc        0x4 ./src/W7500x_it.o
-                0x000043cc                SysTick_Handler
+                0x000045d0        0x4 ./src/W7500x_it.o
+                0x000045d0                SysTick_Handler
  .text.SSP0_Handler
-                0x000043d0        0x4 ./src/W7500x_it.o
-                0x000043d0                SSP0_Handler
+                0x000045d4        0x4 ./src/W7500x_it.o
+                0x000045d4                SSP0_Handler
  .text.SSP1_Handler
-                0x000043d4        0x4 ./src/W7500x_it.o
-                0x000043d4                SSP1_Handler
+                0x000045d8        0x4 ./src/W7500x_it.o
+                0x000045d8                SSP1_Handler
  .text.UART0_Handler
-                0x000043d8        0x4 ./src/W7500x_it.o
-                0x000043d8                UART0_Handler
+                0x000045dc        0x4 ./src/W7500x_it.o
+                0x000045dc                UART0_Handler
  .text.UART1_Handler
-                0x000043dc        0x4 ./src/W7500x_it.o
-                0x000043dc                UART1_Handler
+                0x000045e0        0x4 ./src/W7500x_it.o
+                0x000045e0                UART1_Handler
  .text.UART2_Handler
-                0x000043e0        0x4 ./src/W7500x_it.o
-                0x000043e0                UART2_Handler
+                0x000045e4        0x4 ./src/W7500x_it.o
+                0x000045e4                UART2_Handler
  .text.I2C0_Handler
-                0x000043e4        0x4 ./src/W7500x_it.o
-                0x000043e4                I2C0_Handler
+                0x000045e8        0x4 ./src/W7500x_it.o
+                0x000045e8                I2C0_Handler
  .text.I2C1_Handler
-                0x000043e8        0x4 ./src/W7500x_it.o
-                0x000043e8                I2C1_Handler
+                0x000045ec        0x4 ./src/W7500x_it.o
+                0x000045ec                I2C1_Handler
  .text.PORT0_Handler
-                0x000043ec        0x4 ./src/W7500x_it.o
-                0x000043ec                PORT0_Handler
+                0x000045f0        0x4 ./src/W7500x_it.o
+                0x000045f0                PORT0_Handler
  .text.PORT1_Handler
-                0x000043f0        0x4 ./src/W7500x_it.o
-                0x000043f0                PORT1_Handler
+                0x000045f4        0x4 ./src/W7500x_it.o
+                0x000045f4                PORT1_Handler
  .text.PORT2_Handler
-                0x000043f4        0x4 ./src/W7500x_it.o
-                0x000043f4                PORT2_Handler
+                0x000045f8        0x4 ./src/W7500x_it.o
+                0x000045f8                PORT2_Handler
  .text.PORT3_Handler
-                0x000043f8        0x4 ./src/W7500x_it.o
-                0x000043f8                PORT3_Handler
+                0x000045fc        0x4 ./src/W7500x_it.o
+                0x000045fc                PORT3_Handler
  .text.DMA_Handler
-                0x000043fc        0x4 ./src/W7500x_it.o
-                0x000043fc                DMA_Handler
+                0x00004600        0x4 ./src/W7500x_it.o
+                0x00004600                DMA_Handler
  .text.DUALTIMER0_Handler
-                0x00004400        0x4 ./src/W7500x_it.o
-                0x00004400                DUALTIMER0_Handler
+                0x00004604        0x4 ./src/W7500x_it.o
+                0x00004604                DUALTIMER0_Handler
  .text.DUALTIMER1_Handler
-                0x00004404        0x4 ./src/W7500x_it.o
-                0x00004404                DUALTIMER1_Handler
+                0x00004608        0x4 ./src/W7500x_it.o
+                0x00004608                DUALTIMER1_Handler
  .text.PWM0_Handler
-                0x00004408        0x4 ./src/W7500x_it.o
-                0x00004408                PWM0_Handler
+                0x0000460c        0x4 ./src/W7500x_it.o
+                0x0000460c                PWM0_Handler
  .text.PWM1_Handler
-                0x0000440c        0x4 ./src/W7500x_it.o
-                0x0000440c                PWM1_Handler
+                0x00004610        0x4 ./src/W7500x_it.o
+                0x00004610                PWM1_Handler
  .text.PWM2_Handler
-                0x00004410        0x4 ./src/W7500x_it.o
-                0x00004410                PWM2_Handler
+                0x00004614        0x4 ./src/W7500x_it.o
+                0x00004614                PWM2_Handler
  .text.PWM3_Handler
-                0x00004414        0x4 ./src/W7500x_it.o
-                0x00004414                PWM3_Handler
+                0x00004618        0x4 ./src/W7500x_it.o
+                0x00004618                PWM3_Handler
  .text.PWM4_Handler
-                0x00004418        0x4 ./src/W7500x_it.o
-                0x00004418                PWM4_Handler
+                0x0000461c        0x4 ./src/W7500x_it.o
+                0x0000461c                PWM4_Handler
  .text.PWM5_Handler
-                0x0000441c        0x4 ./src/W7500x_it.o
-                0x0000441c                PWM5_Handler
+                0x00004620        0x4 ./src/W7500x_it.o
+                0x00004620                PWM5_Handler
  .text.PWM6_Handler
-                0x00004420        0x4 ./src/W7500x_it.o
-                0x00004420                PWM6_Handler
+                0x00004624        0x4 ./src/W7500x_it.o
+                0x00004624                PWM6_Handler
  .text.PWM7_Handler
-                0x00004424        0x4 ./src/W7500x_it.o
-                0x00004424                PWM7_Handler
+                0x00004628        0x4 ./src/W7500x_it.o
+                0x00004628                PWM7_Handler
  .text.ADC_Handler
-                0x00004428        0x4 ./src/W7500x_it.o
-                0x00004428                ADC_Handler
+                0x0000462c        0x4 ./src/W7500x_it.o
+                0x0000462c                ADC_Handler
  .text.WZTOE_Handler
-                0x0000442c        0x4 ./src/W7500x_it.o
-                0x0000442c                WZTOE_Handler
+                0x00004630        0x4 ./src/W7500x_it.o
+                0x00004630                WZTOE_Handler
  .text.EXTI_Handler
-                0x00004430        0x4 ./src/W7500x_it.o
-                0x00004430                EXTI_Handler
- .text._write   0x00004434       0x20 ./src/_write.o
-                0x00004434                _write
+                0x00004634        0x4 ./src/W7500x_it.o
+                0x00004634                EXTI_Handler
  .text.W7500x_Init
-                0x00004454       0x20 ./src/main.o
+                0x00004638       0x20 ./src/main.o
  .text.W7500x_WZTOE_Init
-                0x00004474       0x2c ./src/main.o
+                0x00004658       0x54 ./src/main.o
  .text.application_jump
-                0x000044a0       0x10 ./src/main.o
-                0x000044a0                application_jump
+                0x000046ac       0x10 ./src/main.o
+                0x000046ac                application_jump
  .text.process_dhcp
-                0x000044b0       0x4c ./src/main.o
-                0x000044b0                process_dhcp
+                0x000046bc       0x4c ./src/main.o
+                0x000046bc                process_dhcp
  .text.display_Dev_Info_header
-                0x000044fc       0x60 ./src/main.o
-                0x000044fc                display_Dev_Info_header
+                0x00004708       0x60 ./src/main.o
+                0x00004708                display_Dev_Info_header
  .text.display_Dev_Info_dhcp
-                0x0000455c       0x38 ./src/main.o
-                0x0000455c                display_Dev_Info_dhcp
+                0x00004768       0x38 ./src/main.o
+                0x00004768                display_Dev_Info_dhcp
  .text.check_mac_address
-                0x00004594       0xfc ./src/main.o
-                0x00004594                check_mac_address
+                0x000047a0       0xfc ./src/main.o
+                0x000047a0                check_mac_address
  .text.Copy_Interrupt_VectorTable
-                0x00004690       0x58 ./src/main.o
-                0x00004690                Copy_Interrupt_VectorTable
- .text.main     0x000046e8      0x130 ./src/main.o
-                0x000046e8                main
- .text.delay    0x00004818       0x2c ./src/main.o
-                0x00004818                delay
- .text          0x00004844       0x9c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_udivsi3.o)
-                0x00004844                __aeabi_uidiv
-                0x00004844                __udivsi3
-                0x000048cc                __aeabi_uidivmod
- .text          0x000048e0        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x000048e0                __aeabi_idiv0
-                0x000048e0                __aeabi_ldiv0
- .text.atoi     0x000048e4        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-atoi.o)
-                0x000048e4                atoi
- .text.__errno  0x000048f0        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
-                0x000048f0                __errno
- .text.memcmp   0x000048fc       0x1e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcmp.o)
-                0x000048fc                memcmp
- .text.memcpy   0x0000491a       0x12 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
-                0x0000491a                memcpy
- .text.memset   0x0000492c       0x10 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
-                0x0000492c                memset
- .text.printf   0x0000493c       0x34 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-printf.o)
-                0x0000493c                iprintf
-                0x0000493c                printf
- .text._puts_r  0x00004970       0xc2 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-puts.o)
-                0x00004970                _puts_r
- *fill*         0x00004a32        0x2 
- .text.puts     0x00004a34       0x14 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-puts.o)
-                0x00004a34                puts
- .text.sprintf  0x00004a48       0x44 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sprintf.o)
-                0x00004a48                siprintf
-                0x00004a48                sprintf
- .text.sscanf   0x00004a8c       0x50 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sscanf.o)
-                0x00004a8c                siscanf
-                0x00004a8c                sscanf
- .text.__sread  0x00004adc       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
-                0x00004adc                __sread
+                0x0000489c       0x58 ./src/main.o
+                0x0000489c                Copy_Interrupt_VectorTable
+ .text.main     0x000048f4      0x130 ./src/main.o
+                0x000048f4                main
+ .text.delay    0x00004a24       0x2c ./src/main.o
+                0x00004a24                delay
+ .text._write   0x00004a50       0x1c ./src/retarget.o
+                0x00004a50                _write
+ .text          0x00004a6c       0x9c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_udivsi3.o)
+                0x00004a6c                __aeabi_uidiv
+                0x00004a6c                __udivsi3
+                0x00004af4                __aeabi_uidivmod
+ .text          0x00004b08        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x00004b08                __aeabi_idiv0
+                0x00004b08                __aeabi_ldiv0
+ .text.atoi     0x00004b0c        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-atoi.o)
+                0x00004b0c                atoi
+ .text.__errno  0x00004b18        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
+                0x00004b18                __errno
+ .text.memcmp   0x00004b24       0x1e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcmp.o)
+                0x00004b24                memcmp
+ .text.memcpy   0x00004b42       0x12 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
+                0x00004b42                memcpy
+ .text.memset   0x00004b54       0x10 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x00004b54                memset
+ .text.printf   0x00004b64       0x34 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-printf.o)
+                0x00004b64                iprintf
+                0x00004b64                printf
+ .text._puts_r  0x00004b98       0xc2 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-puts.o)
+                0x00004b98                _puts_r
+ *fill*         0x00004c5a        0x2 
+ .text.puts     0x00004c5c       0x14 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-puts.o)
+                0x00004c5c                puts
+ .text.sprintf  0x00004c70       0x44 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sprintf.o)
+                0x00004c70                siprintf
+                0x00004c70                sprintf
+ .text.sscanf   0x00004cb4       0x50 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sscanf.o)
+                0x00004cb4                siscanf
+                0x00004cb4                sscanf
+ .text.__sread  0x00004d04       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+                0x00004d04                __sread
  .text.__seofread
-                0x00004b04        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
-                0x00004b04                __seofread
+                0x00004d2c        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+                0x00004d2c                __seofread
  .text.__swrite
-                0x00004b08       0x38 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
-                0x00004b08                __swrite
- .text.__sseek  0x00004b40       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
-                0x00004b40                __sseek
+                0x00004d30       0x38 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+                0x00004d30                __swrite
+ .text.__sseek  0x00004d68       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+                0x00004d68                __sseek
  .text.__sclose
-                0x00004b6c        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
-                0x00004b6c                __sclose
- .text.strchr   0x00004b78       0x18 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strchr.o)
-                0x00004b78                strchr
- .text          0x00004b90       0x14 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strcmp.o)
-                0x00004b90                strcmp
- .text.strcpy   0x00004ba4       0x10 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strcpy.o)
-                0x00004ba4                strcpy
- .text.strlen   0x00004bb4        0xe c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strlen.o)
-                0x00004bb4                strlen
- .text.strncmp  0x00004bc2       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strncmp.o)
-                0x00004bc2                strncmp
- *fill*         0x00004bee        0x2 
- .text.strtok   0x00004bf0       0x64 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtok.o)
-                0x00004bf0                strtok
+                0x00004d94        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+                0x00004d94                __sclose
+ .text.strchr   0x00004da0       0x18 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strchr.o)
+                0x00004da0                strchr
+ .text          0x00004db8       0x14 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strcmp.o)
+                0x00004db8                strcmp
+ .text.strcpy   0x00004dcc       0x10 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strcpy.o)
+                0x00004dcc                strcpy
+ .text.strlen   0x00004ddc        0xe c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strlen.o)
+                0x00004ddc                strlen
+ .text.strncmp  0x00004dea       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strncmp.o)
+                0x00004dea                strncmp
+ *fill*         0x00004e16        0x2 
+ .text.strtok   0x00004e18       0x64 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtok.o)
+                0x00004e18                strtok
  .text.__strtok_r
-                0x00004c54       0x5c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtok_r.o)
-                0x00004c54                __strtok_r
+                0x00004e7c       0x5c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtok_r.o)
+                0x00004e7c                __strtok_r
  .text._strtol_r
-                0x00004cb0      0x114 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtol.o)
-                0x00004cb0                _strtol_r
- .text.strtol   0x00004dc4       0x1c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtol.o)
-                0x00004dc4                strtol
+                0x00004ed8      0x114 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtol.o)
+                0x00004ed8                _strtol_r
+ .text.strtol   0x00004fec       0x1c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtol.o)
+                0x00004fec                strtol
  .text.__ssputs_r
-                0x00004de0       0xc0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfprintf.o)
-                0x00004de0                __ssputs_r
+                0x00005008       0xc0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfprintf.o)
+                0x00005008                __ssputs_r
  .text._svfprintf_r
-                0x00004ea0      0x1e0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfprintf.o)
-                0x00004ea0                _svfiprintf_r
-                0x00004ea0                _svfprintf_r
+                0x000050c8      0x1e0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfprintf.o)
+                0x000050c8                _svfiprintf_r
+                0x000050c8                _svfprintf_r
  .text._sungetc_r
-                0x00005080       0x7a c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
-                0x00005080                _sungetc_r
+                0x000052a8       0x7a c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
+                0x000052a8                _sungetc_r
  .text.__ssrefill_r
-                0x000050fa       0x3e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
-                0x000050fa                __ssrefill_r
+                0x00005322       0x3e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
+                0x00005322                __ssrefill_r
  .text.__ssvfscanf_r
-                0x00005138      0x2b0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
-                0x00005138                __ssvfiscanf_r
-                0x00005138                __ssvfscanf_r
+                0x00005360      0x2b0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
+                0x00005360                __ssvfiscanf_r
+                0x00005360                __ssvfscanf_r
  .text.__submore
-                0x000053e8       0x7c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-ungetc.o)
-                0x000053e8                __submore
+                0x00005610       0x7c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-ungetc.o)
+                0x00005610                __submore
  .text.__sfputc_r
-                0x00005464       0x2a c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
+                0x0000568c       0x2a c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
  .text.__sfputs_r
-                0x0000548e       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
-                0x0000548e                __sfputs_r
- *fill*         0x000054b2        0x2 
+                0x000056b6       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
+                0x000056b6                __sfputs_r
+ *fill*         0x000056da        0x2 
  .text._vfprintf_r
-                0x000054b4      0x210 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
-                0x000054b4                _vfprintf_r
-                0x000054b4                _vfiprintf_r
+                0x000056dc      0x210 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
+                0x000056dc                _vfprintf_r
+                0x000056dc                _vfiprintf_r
  .text._printf_common
-                0x000056c4       0xe8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
-                0x000056c4                _printf_common
+                0x000058ec       0xe8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
+                0x000058ec                _printf_common
  .text._printf_i
-                0x000057ac      0x22c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
-                0x000057ac                _printf_i
+                0x000059d4      0x22c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
+                0x000059d4                _printf_i
  .text._scanf_chars
-                0x000059d8       0xc8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
-                0x000059d8                _scanf_chars
+                0x00005c00       0xc8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
+                0x00005c00                _scanf_chars
  .text._scanf_i
-                0x00005aa0      0x1fc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
-                0x00005aa0                _scanf_i
+                0x00005cc8      0x1fc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
+                0x00005cc8                _scanf_i
  .text._vsnprintf_r
-                0x00005c9c       0x54 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vsnprintf.o)
-                0x00005c9c                _vsniprintf_r
-                0x00005c9c                _vsnprintf_r
+                0x00005ec4       0x54 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vsnprintf.o)
+                0x00005ec4                _vsniprintf_r
+                0x00005ec4                _vsnprintf_r
  .text.vsnprintf
-                0x00005cf0       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vsnprintf.o)
-                0x00005cf0                vsniprintf
-                0x00005cf0                vsnprintf
+                0x00005f18       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vsnprintf.o)
+                0x00005f18                vsniprintf
+                0x00005f18                vsnprintf
  .text.__swbuf_r
-                0x00005d10       0xb0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wbuf.o)
-                0x00005d10                __swbuf_r
+                0x00005f38       0xb0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wbuf.o)
+                0x00005f38                __swbuf_r
  .text._write_r
-                0x00005dc0       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-writer.o)
-                0x00005dc0                _write_r
+                0x00005fe8       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-writer.o)
+                0x00005fe8                _write_r
  .text.__swsetup_r
-                0x00005de8       0xe4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wsetup.o)
-                0x00005de8                __swsetup_r
+                0x00006010       0xe4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wsetup.o)
+                0x00006010                __swsetup_r
  .text._close_r
-                0x00005ecc       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-closer.o)
-                0x00005ecc                _close_r
+                0x000060f4       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-closer.o)
+                0x000060f4                _close_r
  .text.__sflush_r
-                0x00005ef0      0x112 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
-                0x00005ef0                __sflush_r
- *fill*         0x00006002        0x2 
+                0x00006118      0x112 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
+                0x00006118                __sflush_r
+ *fill*         0x0000622a        0x2 
  .text._fflush_r
-                0x00006004       0x58 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
-                0x00006004                _fflush_r
+                0x0000622c       0x58 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
+                0x0000622c                _fflush_r
  .text._cleanup_r
-                0x0000605c       0x34 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x0000605c                _cleanup_r
+                0x00006284       0x34 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00006284                _cleanup_r
  .text.std.isra.0
-                0x00006090       0x48 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x000062b8       0x48 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
  .text.__sfmoreglue
-                0x000060d8       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x000060d8                __sfmoreglue
- .text.__sinit  0x00006104       0x64 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x00006104                __sinit
- .text.__sfp    0x00006168       0x7c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x00006168                __sfp
+                0x00006300       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00006300                __sfmoreglue
+ .text.__sinit  0x0000632c       0x64 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x0000632c                __sinit
+ .text.__sfp    0x00006390       0x7c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00006390                __sfp
  .text._lseek_r
-                0x000061e4       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-lseekr.o)
-                0x000061e4                _lseek_r
+                0x0000640c       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-lseekr.o)
+                0x0000640c                _lseek_r
  .text.__smakebuf_r
-                0x0000620c       0xa0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-makebuf.o)
-                0x0000620c                __smakebuf_r
- .text.malloc   0x000062ac       0x14 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-malloc.o)
-                0x000062ac                malloc
- .text.memchr   0x000062c0       0x16 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memchr-stub.o)
-                0x000062c0                memchr
- .text.memmove  0x000062d6       0x32 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memmove.o)
-                0x000062d6                memmove
- .text._free_r  0x00006308       0x90 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-freer.o)
-                0x00006308                _free_r
+                0x00006434       0xa0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-makebuf.o)
+                0x00006434                __smakebuf_r
+ .text.malloc   0x000064d4       0x14 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-malloc.o)
+                0x000064d4                malloc
+ .text.memchr   0x000064e8       0x16 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memchr-stub.o)
+                0x000064e8                memchr
+ .text.memmove  0x000064fe       0x32 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memmove.o)
+                0x000064fe                memmove
+ .text._free_r  0x00006530       0x90 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-freer.o)
+                0x00006530                _free_r
  .text._malloc_r
-                0x00006398       0xa8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-mallocr.o)
-                0x00006398                _malloc_r
+                0x000065c0       0xa8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-mallocr.o)
+                0x000065c0                _malloc_r
  .text._realloc_r
-                0x00006440       0x4c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-reallocr.o)
-                0x00006440                _realloc_r
- .text._read_r  0x0000648c       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-readr.o)
-                0x0000648c                _read_r
- .text._sbrk_r  0x000064b4       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sbrkr.o)
-                0x000064b4                _sbrk_r
- .text.__sccl   0x000064d8       0x66 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sccl.o)
-                0x000064d8                __sccl
- *fill*         0x0000653e        0x2 
+                0x00006668       0x4c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-reallocr.o)
+                0x00006668                _realloc_r
+ .text._read_r  0x000066b4       0x28 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-readr.o)
+                0x000066b4                _read_r
+ .text._sbrk_r  0x000066dc       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sbrkr.o)
+                0x000066dc                _sbrk_r
+ .text.__sccl   0x00006700       0x66 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sccl.o)
+                0x00006700                __sccl
+ *fill*         0x00006766        0x2 
  .text._strtoul_r
-                0x00006540       0xf8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtoul.o)
-                0x00006540                _strtoul_r
+                0x00006768       0xf8 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strtoul.o)
+                0x00006768                _strtoul_r
  .text._fstat_r
-                0x00006638       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fstatr.o)
-                0x00006638                _fstat_r
+                0x00006860       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fstatr.o)
+                0x00006860                _fstat_r
  .text._isatty_r
-                0x0000665c       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
-                0x0000665c                _isatty_r
+                0x00006884       0x24 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
+                0x00006884                _isatty_r
  .text._malloc_usable_size_r
-                0x00006680       0x12 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
-                0x00006680                _malloc_usable_size_r
+                0x000068a8       0x12 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
+                0x000068a8                _malloc_usable_size_r
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x00006692        0x2 
+ *fill*         0x000068ba        0x2 
  .rodata.str1.4
-                0x00006694       0xbd ./system/src/cortexm/exception_handlers.o
+                0x000068bc       0xbd ./system/src/cortexm/exception_handlers.o
                                  0xc0 (size before relaxing)
- *fill*         0x00006751        0x3 
+ *fill*         0x00006979        0x3 
  .rodata.str1.4
-                0x00006754       0x19 ./src/ioLibrary/MDIO/W7500x_miim.o
+                0x0000697c       0x19 ./src/ioLibrary/MDIO/W7500x_miim.o
                                  0x1c (size before relaxing)
- *fill*         0x0000676d        0x3 
+ *fill*         0x00006995        0x3 
  .rodata.DHCP_run
-                0x00006770       0x14 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x00006998       0x14 ./src/ioLibrary/Internet/DHCP/dhcp.o
  .rodata.str1.4
-                0x00006784       0x12 ./src/ioLibrary/Internet/DHCP/dhcp.o
+                0x000069ac       0x12 ./src/ioLibrary/Internet/DHCP/dhcp.o
                                  0x14 (size before relaxing)
- *fill*         0x00006796        0x2 
+ *fill*         0x000069be        0x2 
  .rodata.ctlnetwork
-                0x00006798       0x18 ./src/ioLibrary/Ethernet/wizchip_conf.o
+                0x000069c0       0x18 ./src/ioLibrary/Ethernet/wizchip_conf.o
  .rodata.str1.4
-                0x000067b0      0x181 ./src/PlatformHandler/deviceHandler.o
+                0x000069d8      0x181 ./src/PlatformHandler/deviceHandler.o
                                 0x184 (size before relaxing)
- *fill*         0x00006931        0x3 
+ *fill*         0x00006b59        0x3 
  .rodata.str1.4
-                0x00006934       0x17 ./src/PlatformHandler/uartHandler.o
+                0x00006b5c       0x17 ./src/PlatformHandler/uartHandler.o
                                  0x18 (size before relaxing)
- *fill*         0x0000694b        0x1 
+ *fill*         0x00006b73        0x1 
  .rodata.proc_SEGCP
-                0x0000694c      0x1b8 ./src/Configuration/segcp.o
+                0x00006b74      0x1b8 ./src/Configuration/segcp.o
  .rodata.str1.4
-                0x00006b04      0x22c ./src/Configuration/segcp.o
+                0x00006d2c      0x22c ./src/Configuration/segcp.o
                                 0x23c (size before relaxing)
  .rodata.str1.4
-                0x00006d30      0x19e ./src/ConfigData.o
-                                0x1a4 (size before relaxing)
- *fill*         0x00006ece        0x2 
+                0x00006f58      0x14e ./src/ConfigData.o
+                                0x154 (size before relaxing)
+ *fill*         0x000070a6        0x2 
  .rodata.LED_PIN
-                0x00006ed0        0x4 ./src/W7500x_board.o
-                0x00006ed0                LED_PIN
+                0x000070a8        0x4 ./src/W7500x_board.o
+                0x000070a8                LED_PIN
+ .rodata        0x000070ac        0x8 ./src/main.o
  .rodata.str1.4
-                0x00006ed4       0xe8 ./src/main.o
+                0x000070b4       0xe8 ./src/main.o
                                  0xf4 (size before relaxing)
  .rodata._ctype_
-                0x00006fbc      0x101 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-ctype_.o)
-                0x00006fbc                _ctype_
+                0x0000719c      0x101 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-ctype_.o)
+                0x0000719c                _ctype_
  .rodata.str1.1
-                0x000070bd        0x2 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
- *fill*         0x000070bf        0x1 
+                0x0000729d        0x2 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+ *fill*         0x0000729f        0x1 
  .rodata._global_impure_ptr
-                0x000070c0        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
-                0x000070c0                _global_impure_ptr
+                0x000072a0        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+                0x000072a0                _global_impure_ptr
  .rodata.str1.1
-                0x000070c4       0x11 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfprintf.o)
+                0x000072a4       0x11 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfprintf.o)
  .rodata.str1.1
                 0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-svfscanf.o)
  .rodata.str1.1
                 0x00000000       0x11 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
  .rodata.str1.1
-                0x000070d5       0x22 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
- *fill*         0x000070f7        0x1 
- .rodata        0x000070f8        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
+                0x000072b5       0x22 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
+ *fill*         0x000072d7        0x1 
+ .rodata        0x000072d8        0xc c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
  .rodata.str1.1
-                0x00007104       0x1b c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
- *fill*         0x0000711f        0x1 
+                0x000072e4       0x1b c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfscanf_i.o)
+ *fill*         0x000072ff        0x1 
  .rodata.__sf_fake_stdin
-                0x00007120       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x00007120                __sf_fake_stdin
+                0x00007300       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00007300                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x00007140       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x00007140                __sf_fake_stdout
+                0x00007320       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00007320                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x00007160       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
-                0x00007160                __sf_fake_stderr
+                0x00007340       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00007340                __sf_fake_stderr
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
@@ -4815,37 +4846,37 @@ END GROUP
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00007180        0x0
+.vfp11_veneer   0x00007360        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00007180        0x0
+.v4_bx          0x00007360        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00007180        0x0
+.iplt           0x00007360        0x0
  .iplt          0x00000000        0x0 ./system/src/newlib/_cxx.o
 
-.rel.dyn        0x00007180        0x0
+.rel.dyn        0x00007360        0x0
  .rel.iplt      0x00000000        0x0 ./system/src/newlib/_cxx.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00007180                . = ALIGN (0x4)
-                0x00007180                __exidx_start = .
+                0x00007360                . = ALIGN (0x4)
+                0x00007360                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00007180                __exidx_end = .
-                0x00007180                . = ALIGN (0x4)
-                0x00007180                _etext = .
-                0x00007180                __etext = .
+                0x00007360                __exidx_end = .
+                0x00007360                . = ALIGN (0x4)
+                0x00007360                _etext = .
+                0x00007360                __etext = .
 
-.data_CCMRAM    0x10000000        0x0 load address 0x00007180
+.data_CCMRAM    0x10000000        0x0 load address 0x00007360
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x10000000                . = ALIGN (0x4)
-                0x00007180                _sidata = LOADADDR (.data)
+                0x00007360                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x1cc load address 0x00007180
+.data           0x20000000      0x1cc load address 0x00007360
  FILL mask 0xff
                 0x20000000                _sdata = .
                 0x20000000                __data_start__ = .
@@ -4911,7 +4942,7 @@ END GROUP
                 0x200001cc                _edata = .
                 0x200001cc                __data_end__ = .
 
-.igot.plt       0x200001cc        0x0 load address 0x0000734c
+.igot.plt       0x200001cc        0x0 load address 0x0000752c
  .igot.plt      0x00000000        0x0 ./system/src/newlib/_cxx.o
 
 .bss_CCMRAM     0x10000000        0x0
@@ -5159,8 +5190,8 @@ END GROUP
  .comment       0x00000000       0x71 ./src/ConfigData.o
  .comment       0x00000000       0x71 ./src/W7500x_board.o
  .comment       0x00000000       0x71 ./src/W7500x_it.o
- .comment       0x00000000       0x71 ./src/_write.o
  .comment       0x00000000       0x71 ./src/main.o
+ .comment       0x00000000       0x71 ./src/retarget.o
 
 .ARM.attributes
                 0x00000000       0x2f
@@ -5221,9 +5252,9 @@ END GROUP
  .ARM.attributes
                 0x0000052b       0x31 ./src/W7500x_it.o
  .ARM.attributes
-                0x0000055c       0x31 ./src/_write.o
+                0x0000055c       0x31 ./src/main.o
  .ARM.attributes
-                0x0000058d       0x31 ./src/main.o
+                0x0000058d       0x31 ./src/retarget.o
  .ARM.attributes
                 0x000005be       0x1e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
@@ -5396,14 +5427,14 @@ END GROUP
  .debug_aranges
                 0x00000a60      0x108 ./src/W7500x_it.o
  .debug_aranges
-                0x00000b68       0x20 ./src/_write.o
+                0x00000b68       0x70 ./src/main.o
  .debug_aranges
-                0x00000b88       0x70 ./src/main.o
+                0x00000bd8       0x20 ./src/retarget.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xed65
+.debug_info     0x00000000     0xed04
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x100 ./system/src/newlib/_exit.o
  .debug_info    0x00000100      0x125 ./system/src/newlib/_sbrk.o
@@ -5430,13 +5461,13 @@ END GROUP
  .debug_info    0x0000990a     0x1b18 ./src/Configuration/segcp.o
  .debug_info    0x0000b422      0x537 ./src/Configuration/util.o
  .debug_info    0x0000b959      0x791 ./src/Callback/dhcp_cb.o
- .debug_info    0x0000c0ea     0x10bd ./src/ConfigData.o
- .debug_info    0x0000d1a7      0x8a0 ./src/W7500x_board.o
- .debug_info    0x0000da47      0x27b ./src/W7500x_it.o
- .debug_info    0x0000dcc2      0x147 ./src/_write.o
- .debug_info    0x0000de09      0xf5c ./src/main.o
+ .debug_info    0x0000c0ea      0xfc4 ./src/ConfigData.o
+ .debug_info    0x0000d0ae      0x8a0 ./src/W7500x_board.o
+ .debug_info    0x0000d94e      0x27b ./src/W7500x_it.o
+ .debug_info    0x0000dbc9     0x1021 ./src/main.o
+ .debug_info    0x0000ebea      0x11a ./src/retarget.o
 
-.debug_abbrev   0x00000000     0x32f0
+.debug_abbrev   0x00000000     0x32ce
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0xa4 ./system/src/newlib/_exit.o
  .debug_abbrev  0x000000a4       0xbb ./system/src/newlib/_sbrk.o
@@ -5463,13 +5494,13 @@ END GROUP
  .debug_abbrev  0x000023eb      0x2c6 ./src/Configuration/segcp.o
  .debug_abbrev  0x000026b1      0x15a ./src/Configuration/util.o
  .debug_abbrev  0x0000280b      0x1a4 ./src/Callback/dhcp_cb.o
- .debug_abbrev  0x000029af      0x296 ./src/ConfigData.o
- .debug_abbrev  0x00002c45      0x218 ./src/W7500x_board.o
- .debug_abbrev  0x00002e5d       0x5d ./src/W7500x_it.o
- .debug_abbrev  0x00002eba       0xd7 ./src/_write.o
- .debug_abbrev  0x00002f91      0x35f ./src/main.o
+ .debug_abbrev  0x000029af      0x27c ./src/ConfigData.o
+ .debug_abbrev  0x00002c2b      0x218 ./src/W7500x_board.o
+ .debug_abbrev  0x00002e43       0x5d ./src/W7500x_it.o
+ .debug_abbrev  0x00002ea0      0x38c ./src/main.o
+ .debug_abbrev  0x0000322c       0xa2 ./src/retarget.o
 
-.debug_line     0x00000000     0x8a29
+.debug_line     0x00000000     0x8add
  *(.debug_line)
  .debug_line    0x00000000      0x2b2 ./system/src/newlib/_exit.o
  .debug_line    0x000002b2      0x264 ./system/src/newlib/_sbrk.o
@@ -5496,11 +5527,11 @@ END GROUP
  .debug_line    0x00005d83      0x8bf ./src/Configuration/segcp.o
  .debug_line    0x00006642      0x45e ./src/Configuration/util.o
  .debug_line    0x00006aa0      0x3fc ./src/Callback/dhcp_cb.o
- .debug_line    0x00006e9c      0x693 ./src/ConfigData.o
- .debug_line    0x0000752f      0x58e ./src/W7500x_board.o
- .debug_line    0x00007abd      0x4ab ./src/W7500x_it.o
- .debug_line    0x00007f68      0x28a ./src/_write.o
- .debug_line    0x000081f2      0x837 ./src/main.o
+ .debug_line    0x00006e9c      0x677 ./src/ConfigData.o
+ .debug_line    0x00007513      0x58e ./src/W7500x_board.o
+ .debug_line    0x00007aa1      0x4ab ./src/W7500x_it.o
+ .debug_line    0x00007f4c      0x836 ./src/main.o
+ .debug_line    0x00008782      0x35b ./src/retarget.o
 
 .debug_frame    0x00000000     0x2828
  *(.debug_frame)
@@ -5529,11 +5560,11 @@ END GROUP
  .debug_frame   0x000013f8       0xb4 ./src/Configuration/segcp.o
  .debug_frame   0x000014ac       0xd0 ./src/Configuration/util.o
  .debug_frame   0x0000157c       0x3c ./src/Callback/dhcp_cb.o
- .debug_frame   0x000015b8      0x184 ./src/ConfigData.o
- .debug_frame   0x0000173c      0x18c ./src/W7500x_board.o
- .debug_frame   0x000018c8      0x1f0 ./src/W7500x_it.o
- .debug_frame   0x00001ab8       0x28 ./src/_write.o
- .debug_frame   0x00001ae0      0x134 ./src/main.o
+ .debug_frame   0x000015b8      0x17c ./src/ConfigData.o
+ .debug_frame   0x00001734      0x18c ./src/W7500x_board.o
+ .debug_frame   0x000018c0      0x1f0 ./src/W7500x_it.o
+ .debug_frame   0x00001ab0      0x138 ./src/main.o
+ .debug_frame   0x00001be8       0x2c ./src/retarget.o
  .debug_frame   0x00001c14       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m\libgcc.a(_udivsi3.o)
  .debug_frame   0x00001c34       0x40 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-atoi.o)
  .debug_frame   0x00001c74       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
@@ -5581,7 +5612,7 @@ END GROUP
  .debug_frame   0x000027dc       0x2c c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
  .debug_frame   0x00002808       0x20 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
 
-.debug_str      0x00000000    0x17682
+.debug_str      0x00000000    0x176b0
  *(.debug_str)
  .debug_str     0x00000000     0x4c76 ./system/src/newlib/_exit.o
                                0x4da7 (size before relaxing)
@@ -5617,34 +5648,34 @@ END GROUP
                                0xc752 (size before relaxing)
  .debug_str     0x000132a9      0x567 ./src/ioLibrary/Ethernet/wizchip_conf.o
                                0xc5dc (size before relaxing)
- .debug_str     0x00013810     0x1e0c ./src/PlatformHandler/deviceHandler.o
-                               0xf0c6 (size before relaxing)
- .debug_str     0x0001561c       0xce ./src/PlatformHandler/flashHandler.o
+ .debug_str     0x00013810     0x1df9 ./src/PlatformHandler/deviceHandler.o
+                               0xf0b3 (size before relaxing)
+ .debug_str     0x00015609       0xce ./src/PlatformHandler/flashHandler.o
                                0x9a0b (size before relaxing)
- .debug_str     0x000156ea       0x52 ./src/PlatformHandler/storageHandler.o
-                               0x64a5 (size before relaxing)
- .debug_str     0x0001573c      0x3f2 ./src/PlatformHandler/timerHandler.o
-                               0xdf3d (size before relaxing)
- .debug_str     0x00015b2e      0x10e ./src/PlatformHandler/uartHandler.o
-                               0xb95c (size before relaxing)
- .debug_str     0x00015c3c      0x931 ./src/Configuration/segcp.o
-                              0x10eb3 (size before relaxing)
- .debug_str     0x0001656d       0x8f ./src/Configuration/util.o
+ .debug_str     0x000156d7       0x52 ./src/PlatformHandler/storageHandler.o
+                               0x6492 (size before relaxing)
+ .debug_str     0x00015729      0x3f2 ./src/PlatformHandler/timerHandler.o
+                               0xdf2a (size before relaxing)
+ .debug_str     0x00015b1b      0x10e ./src/PlatformHandler/uartHandler.o
+                               0xb949 (size before relaxing)
+ .debug_str     0x00015c29      0x931 ./src/Configuration/segcp.o
+                              0x10ea0 (size before relaxing)
+ .debug_str     0x0001655a       0x8f ./src/Configuration/util.o
                                0x642d (size before relaxing)
- .debug_str     0x000165fc       0x76 ./src/Callback/dhcp_cb.o
+ .debug_str     0x000165e9       0x76 ./src/Callback/dhcp_cb.o
                                0xc997 (size before relaxing)
- .debug_str     0x00016672       0xe8 ./src/ConfigData.o
-                              0x102e4 (size before relaxing)
- .debug_str     0x0001675a      0x167 ./src/W7500x_board.o
-                               0xc08e (size before relaxing)
- .debug_str     0x000168c1      0x16a ./src/W7500x_it.o
-                               0x7bae (size before relaxing)
- .debug_str     0x00016a2b       0x10 ./src/_write.o
-                               0x512f (size before relaxing)
- .debug_str     0x00016a3b      0xc47 ./src/main.o
-                              0x11bb6 (size before relaxing)
+ .debug_str     0x0001665f       0xca ./src/ConfigData.o
+                              0x10295 (size before relaxing)
+ .debug_str     0x00016729      0x167 ./src/W7500x_board.o
+                               0xc07b (size before relaxing)
+ .debug_str     0x00016890      0x16a ./src/W7500x_it.o
+                               0x7b9b (size before relaxing)
+ .debug_str     0x000169fa      0xc57 ./src/main.o
+                              0x11bc7 (size before relaxing)
+ .debug_str     0x00017651       0x5f ./src/retarget.o
+                               0xae7f (size before relaxing)
 
-.debug_loc      0x00000000     0x61ca
+.debug_loc      0x00000000     0x6115
  *(.debug_loc)
  .debug_loc     0x00000000       0x70 ./system/src/newlib/_sbrk.o
  .debug_loc     0x00000070      0x265 ./system/src/newlib/_startup.o
@@ -5666,10 +5697,10 @@ END GROUP
  .debug_loc     0x00004cc3      0x921 ./src/Configuration/segcp.o
  .debug_loc     0x000055e4      0x51e ./src/Configuration/util.o
  .debug_loc     0x00005b02       0x1e ./src/Callback/dhcp_cb.o
- .debug_loc     0x00005b20      0x248 ./src/ConfigData.o
- .debug_loc     0x00005d68       0xfa ./src/W7500x_board.o
- .debug_loc     0x00005e62       0xc6 ./src/_write.o
- .debug_loc     0x00005f28      0x2a2 ./src/main.o
+ .debug_loc     0x00005b20      0x1c4 ./src/ConfigData.o
+ .debug_loc     0x00005ce4       0xfa ./src/W7500x_board.o
+ .debug_loc     0x00005dde      0x2a2 ./src/main.o
+ .debug_loc     0x00006080       0x95 ./src/retarget.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -5716,10 +5747,10 @@ OUTPUT(WIZ750SR_Boot.elf elf32-littlearm)
  .debug_ranges  0x000007e0       0x78 ./src/ConfigData.o
  .debug_ranges  0x00000858       0x88 ./src/W7500x_board.o
  .debug_ranges  0x000008e0       0xf8 ./src/W7500x_it.o
- .debug_ranges  0x000009d8       0x10 ./src/_write.o
- .debug_ranges  0x000009e8       0x60 ./src/main.o
+ .debug_ranges  0x000009d8       0x60 ./src/main.o
+ .debug_ranges  0x00000a38       0x10 ./src/retarget.o
 
-.debug_macro    0x00000000     0x67e9
+.debug_macro    0x00000000     0x68ea
  .debug_macro   0x00000000      0x11b ./system/src/newlib/_exit.o
  .debug_macro   0x0000011b      0x81a ./system/src/newlib/_exit.o
  .debug_macro   0x00000935       0xa3 ./system/src/newlib/_exit.o
@@ -5787,32 +5818,34 @@ OUTPUT(WIZ750SR_Boot.elf elf32-littlearm)
  .debug_macro   0x000044c9      0x180 ./src/ioLibrary/Ethernet/wizchip_conf.o
  .debug_macro   0x00004649      0x20b ./src/PlatformHandler/deviceHandler.o
  .debug_macro   0x00004854      0x136 ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x0000498a      0x1dd ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x00004b67       0x2e ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x00004b95      0x178 ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x00004d0d       0x70 ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x00004d7d       0xa0 ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x00004e1d       0x16 ./src/PlatformHandler/deviceHandler.o
- .debug_macro   0x00004e33      0x149 ./src/PlatformHandler/flashHandler.o
- .debug_macro   0x00004f7c      0x13c ./src/PlatformHandler/flashHandler.o
- .debug_macro   0x000050b8      0x127 ./src/PlatformHandler/storageHandler.o
- .debug_macro   0x000051df       0x9a ./src/PlatformHandler/storageHandler.o
- .debug_macro   0x00005279      0x1ea ./src/PlatformHandler/timerHandler.o
- .debug_macro   0x00005463      0x18d ./src/PlatformHandler/uartHandler.o
- .debug_macro   0x000055f0       0x2e ./src/PlatformHandler/uartHandler.o
- .debug_macro   0x0000561e       0x22 ./src/PlatformHandler/uartHandler.o
- .debug_macro   0x00005640      0x236 ./src/Configuration/segcp.o
- .debug_macro   0x00005876       0xac ./src/Configuration/segcp.o
- .debug_macro   0x00005922       0x22 ./src/Configuration/segcp.o
- .debug_macro   0x00005944      0x214 ./src/Configuration/segcp.o
- .debug_macro   0x00005b58      0x17f ./src/Configuration/util.o
- .debug_macro   0x00005cd7       0x1c ./src/Configuration/util.o
- .debug_macro   0x00005cf3      0x1a7 ./src/Callback/dhcp_cb.o
- .debug_macro   0x00005e9a      0x208 ./src/ConfigData.o
- .debug_macro   0x000060a2      0x1cb ./src/W7500x_board.o
- .debug_macro   0x0000626d       0xbb ./src/W7500x_it.o
- .debug_macro   0x00006328       0xfb ./src/_write.o
- .debug_macro   0x00006423      0x276 ./src/main.o
- .debug_macro   0x00006699       0xbe ./src/main.o
- .debug_macro   0x00006757       0x3a ./src/main.o
- .debug_macro   0x00006791       0x58 ./src/main.o
+ .debug_macro   0x0000498a      0x1d7 ./src/PlatformHandler/deviceHandler.o
+ .debug_macro   0x00004b61       0x2e ./src/PlatformHandler/deviceHandler.o
+ .debug_macro   0x00004b8f      0x178 ./src/PlatformHandler/deviceHandler.o
+ .debug_macro   0x00004d07       0x70 ./src/PlatformHandler/deviceHandler.o
+ .debug_macro   0x00004d77       0xa0 ./src/PlatformHandler/deviceHandler.o
+ .debug_macro   0x00004e17       0x16 ./src/PlatformHandler/deviceHandler.o
+ .debug_macro   0x00004e2d      0x149 ./src/PlatformHandler/flashHandler.o
+ .debug_macro   0x00004f76      0x13c ./src/PlatformHandler/flashHandler.o
+ .debug_macro   0x000050b2      0x127 ./src/PlatformHandler/storageHandler.o
+ .debug_macro   0x000051d9       0x9a ./src/PlatformHandler/storageHandler.o
+ .debug_macro   0x00005273      0x1ea ./src/PlatformHandler/timerHandler.o
+ .debug_macro   0x0000545d      0x18d ./src/PlatformHandler/uartHandler.o
+ .debug_macro   0x000055ea       0x2e ./src/PlatformHandler/uartHandler.o
+ .debug_macro   0x00005618       0x22 ./src/PlatformHandler/uartHandler.o
+ .debug_macro   0x0000563a      0x236 ./src/Configuration/segcp.o
+ .debug_macro   0x00005870       0xac ./src/Configuration/segcp.o
+ .debug_macro   0x0000591c       0x22 ./src/Configuration/segcp.o
+ .debug_macro   0x0000593e      0x214 ./src/Configuration/segcp.o
+ .debug_macro   0x00005b52      0x17f ./src/Configuration/util.o
+ .debug_macro   0x00005cd1       0x1c ./src/Configuration/util.o
+ .debug_macro   0x00005ced      0x1a7 ./src/Callback/dhcp_cb.o
+ .debug_macro   0x00005e94      0x208 ./src/ConfigData.o
+ .debug_macro   0x0000609c      0x1cb ./src/W7500x_board.o
+ .debug_macro   0x00006267       0xbb ./src/W7500x_it.o
+ .debug_macro   0x00006322      0x276 ./src/main.o
+ .debug_macro   0x00006598       0xbe ./src/main.o
+ .debug_macro   0x00006656       0x3a ./src/main.o
+ .debug_macro   0x00006690       0x58 ./src/main.o
+ .debug_macro   0x000066e8      0x1ab ./src/retarget.o
+ .debug_macro   0x00006893       0x16 ./src/retarget.o
+ .debug_macro   0x000068a9       0x41 ./src/retarget.o

@@ -7,22 +7,22 @@ C_SRCS += \
 ../src/ConfigData.c \
 ../src/W7500x_board.c \
 ../src/W7500x_it.c \
-../src/_write.c \
-../src/main.c 
+../src/main.c \
+../src/retarget.c 
 
 OBJS += \
 ./src/ConfigData.o \
 ./src/W7500x_board.o \
 ./src/W7500x_it.o \
-./src/_write.o \
-./src/main.o 
+./src/main.o \
+./src/retarget.o 
 
 C_DEPS += \
 ./src/ConfigData.d \
 ./src/W7500x_board.d \
 ./src/W7500x_it.d \
-./src/_write.d \
-./src/main.d 
+./src/main.d \
+./src/retarget.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

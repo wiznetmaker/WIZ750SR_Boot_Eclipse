@@ -83,6 +83,7 @@ __initialize_hardware(void)
   // in the SystemCoreClock global RAM location.
   //SystemCoreClockUpdate();
 	SystemInit();
+	//SystemInit_User(CLOCK_SOURCE_INTERNAL, PLL_SOURCE_8MHz, SYSTEM_CLOCK_8MHz);
 }
 
 // ----------------------------------------------------------------------------

@@ -375,8 +375,8 @@ static void W7500x_WZTOE_Init(void)
 	////////////////////////////////////////////////////
 	
 	/* Set Network Configuration: HW Socket Tx/Rx buffer size */
-	//uint8_t tx_size[8] = { 2, 2, 2, 2, 2, 2, 2, 2 };
-	//uint8_t rx_size[8] = { 2, 2, 2, 2, 2, 2, 2, 2 };
+	uint8_t tx_size[8] = { 2, 2, 2, 2, 2, 2, 2, 2 };
+	uint8_t rx_size[8] = { 2, 2, 2, 2, 2, 2, 2, 2 };
 		
 	/* Structure for timeout control: RTR, RCR */
 	wiz_NetTimeout * net_timeout;
@@ -398,7 +398,7 @@ static void W7500x_WZTOE_Init(void)
 #endif
 	
 	/* Set Network Configuration */
-	//wizchip_init(tx_size, rx_size);
+	wizchip_init(tx_size, rx_size);
 	
 }
 
