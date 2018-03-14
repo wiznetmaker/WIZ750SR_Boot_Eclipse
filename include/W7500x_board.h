@@ -27,11 +27,11 @@
 		#define __USE_UART_IF_SELECTOR__	// RS-232/TTL or RS-422/485 selector using UART IF selector pin
 		//#define __USE_EXT_EEPROM__			// External EEPROM or Internal Data flash (DAT0/1)
 		#define __USE_BOOT_ENTRY__			// Application boot mode entry pin activated
-		#define __USE_APPBACKUP_AREA__		// If this option activated, Application firmware area is consists of App (50kB) and App backup (50kB). If not, user's application can be 100kB size. (Does not use the backup area)
+		//#define __USE_APPBACKUP_AREA__		// If this option activated, Application firmware area is consists of App (50kB) and App backup (50kB). If not, user's application can be 100kB size. (Does not use the backup area)
 		#define __USE_GPIO_HARDWARE_FLOWCONTROL__
 		#define __USE_USERS_GPIO__
 		//#define __USE_DSR_DTR_DEFAULT__
-        //#define __USE_SAFE_SAVE__           // DevConfig Save verify function added
+        #define __USE_SAFE_SAVE__           // DevConfig Save verify function added
 		#define DEVICE_CLOCK_SELECT	         CLOCK_SOURCE_EXTERNAL
 		#define DEVICE_PLL_SOURCE_CLOCK      PLL_SOURCE_12MHz
 		#define DEVICE_TARGET_SYSTEM_CLOCK   SYSTEM_CLOCK_48MHz

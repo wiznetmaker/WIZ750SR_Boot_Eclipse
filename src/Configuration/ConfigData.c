@@ -43,11 +43,11 @@ void set_DevConfig_to_factory_value(void)
 
 	dev_config.network_info_common.local_ip[0] = 192;
 	dev_config.network_info_common.local_ip[1] = 168;
-	dev_config.network_info_common.local_ip[2] = 0;
-	dev_config.network_info_common.local_ip[3] = 123;
+	dev_config.network_info_common.local_ip[2] = 11;
+	dev_config.network_info_common.local_ip[3] = 2;
 	dev_config.network_info_common.gateway[0] = 192;
 	dev_config.network_info_common.gateway[1] = 168;
-	dev_config.network_info_common.gateway[2] = 0;
+	dev_config.network_info_common.gateway[2] = 11;
 	dev_config.network_info_common.gateway[3] = 1;
 	dev_config.network_info_common.subnet[0] = 255;
 	dev_config.network_info_common.subnet[1] = 255;
@@ -58,8 +58,8 @@ void set_DevConfig_to_factory_value(void)
 	dev_config.network_info[0].state = ST_OPEN;
 	dev_config.network_info[0].remote_ip[0] = 192;
 	dev_config.network_info[0].remote_ip[1] = 168;
-	dev_config.network_info[0].remote_ip[2] = 0;
-	dev_config.network_info[0].remote_ip[3] = 2;
+	dev_config.network_info[0].remote_ip[2] = 11;
+	dev_config.network_info[0].remote_ip[3] = 3;
 	dev_config.network_info[0].local_port = 5000;
 	dev_config.network_info[0].remote_port = 5000;
 	dev_config.network_info[0].inactivity = 0;		// sec, default: NONE
@@ -111,6 +111,8 @@ void set_DevConfig_to_factory_value(void)
 	memset(dev_config.options.dns_domain_name, 0x00, 50);
 	//memcpy(dev_config.options.dns_domain_name, "www.google.com", 14);
 
+    dev_config.options.tcp_rcr_val = 8; // Default RCR(TCP retransmission retry count) value: 8
+
 	dev_config.options.serial_command = SEGCP_ENABLE;
 	dev_config.options.serial_command_echo = SEGCP_DISABLE;
 	dev_config.options.serial_trigger[0] = 0x2b;	// Defualt serial command mode trigger code: '+++' (0x2b, 0x2b, 0x2b)
@@ -157,13 +159,10 @@ void load_DevConfig_from_storage(void)
 		write_storage(STORAGE_CONFIG, 0, &dev_config, sizeof(DevConfig));
 	}
 	
-	//dev_config.network_info[0].state = ST_OPEN;
-	
 	dev_config.fw_ver[0] = MAJOR_VER;
 	dev_config.fw_ver[1] = MINOR_VER;
 	dev_config.fw_ver[2] = MAINTENANCE_VER;
-    
-	//dev_config.serial_info[0].uart_interface = get_uart_if_sel_pin();
+
 	if((dev_config.serial_info->flow_control == flow_rtsonly) || (dev_config.serial_info->flow_control == flow_reverserts))		// Edit for supporting RTS only in 17/3/28 , recommend adapting to WIZ750SR 
 	{
 		dev_config.serial_info[0].uart_interface = 1; // [0] RS-232/TTL mode, [1] RS-422/485 mode
@@ -177,7 +176,6 @@ void load_DevConfig_from_storage(void)
 
 void save_DevConfig_to_storage(void)
 {
-	//write_storage(STORAGE_CONFIG, 0, &dev_config, sizeof(DevConfig));
 #ifndef __USE_SAFE_SAVE__
     write_storage(STORAGE_CONFIG, 0, &dev_config, sizeof(DevConfig));
 #else
@@ -193,12 +191,10 @@ void save_DevConfig_to_storage(void)
         
             if(memcmp(&dev_config, &dev_config_tmp, sizeof(DevConfig)) == 0) { // Config-data set is successfully updated.
                 update_success = SEGCP_ENABLE;
-                if(dev_config.serial_info[0].serial_debug_en) {printf(" > DevConfig is successfully updated\r\n");}
-                //delay(SAVE_INTERVAL_MS);
+                //if(dev_config.serial_info[0].serial_debug_en) {printf(" > DevConfig is successfully updated\r\n");}
             } else {
                 retry_cnt++;
                 if(dev_config.serial_info[0].serial_debug_en) {printf(" > DevConfig update failed, Retry: %d\r\n", retry_cnt);}
-                //delay(SAVE_INTERVAL_MS);
             }
             delay(SAVE_INTERVAL_MS);
             
@@ -257,6 +253,7 @@ void display_Net_Info(void)
 	printf(" # SN : %d.%d.%d.%d\r\n", gWIZNETINFO.sn[0], gWIZNETINFO.sn[1], gWIZNETINFO.sn[2], gWIZNETINFO.sn[3]);
 	printf(" # DNS: %d.%d.%d.%d\r\n", gWIZNETINFO.dns[0], gWIZNETINFO.dns[1], gWIZNETINFO.dns[2], gWIZNETINFO.dns[3]);
 	
+	/*
 	if(value->network_info[0].working_mode != TCP_SERVER_MODE)
 	{
 		if(value->options.dns_use == SEGCP_ENABLE)
@@ -280,6 +277,7 @@ void display_Net_Info(void)
 			}
 		}
 	}
+	*/
 	printf("\r\n");
 }
 
