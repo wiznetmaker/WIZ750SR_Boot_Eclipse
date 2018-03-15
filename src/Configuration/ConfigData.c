@@ -253,7 +253,6 @@ void display_Net_Info(void)
 	printf(" # SN : %d.%d.%d.%d\r\n", gWIZNETINFO.sn[0], gWIZNETINFO.sn[1], gWIZNETINFO.sn[2], gWIZNETINFO.sn[3]);
 	printf(" # DNS: %d.%d.%d.%d\r\n", gWIZNETINFO.dns[0], gWIZNETINFO.dns[1], gWIZNETINFO.dns[2], gWIZNETINFO.dns[3]);
 	
-	/*
 	if(value->network_info[0].working_mode != TCP_SERVER_MODE)
 	{
 		if(value->options.dns_use == SEGCP_ENABLE)
@@ -277,7 +276,6 @@ void display_Net_Info(void)
 			}
 		}
 	}
-	*/
 	printf("\r\n");
 }
 

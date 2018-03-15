@@ -102,11 +102,13 @@ void do_segcp(void);
 uint8_t parse_SEGCP(uint8_t * pmsg, uint8_t * param);
 uint16_t proc_SEGCP(uint8_t * segcp_req, uint8_t * segcp_rep);
 
-uint16_t proc_SEGCP_tcp(uint8_t * segcp_req, uint8_t * segcp_rep);
 uint16_t proc_SEGCP_udp(uint8_t * segcp_req, uint8_t * segcp_rep);
 
-
-void send_keepalive_packet_configtool(uint8_t sock);
+/* TCP search function is not supported in AppBoot mode */
+#ifdef __USE_APPBOOT_TCP_SEARCH__
+    uint16_t proc_SEGCP_tcp(uint8_t * segcp_req, uint8_t * segcp_rep);
+    void send_keepalive_packet_configtool(uint8_t sock);
+#endif
 
 void segcp_timer_msec(void); // for timer
 #endif

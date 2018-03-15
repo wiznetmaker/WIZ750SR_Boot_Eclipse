@@ -40,11 +40,12 @@ uint8_t * tbSEGCPERR[] = {"ERNULL", "ERNOTAVAIL", "ERNOPARAM", "ERIGNORED", "ERN
 
 uint8_t gSEGCPPRIVILEGE = SEGCP_PRIVILEGE_CLR;
 
-// Keep-alive timer values for TCP unicast search function
-uint8_t enable_configtool_keepalive_timer = SEGCP_DISABLE;
-volatile uint16_t configtool_keepalive_time = 0;
-uint8_t flag_send_configtool_keepalive = SEGCP_DISABLE;
-
+#ifdef __USE_APPBOOT_TCP_SEARCH__
+    // Keep-alive timer values for TCP unicast search function
+    uint8_t enable_configtool_keepalive_timer = SEGCP_DISABLE;
+    volatile uint16_t configtool_keepalive_time = 0;
+    uint8_t flag_send_configtool_keepalive = SEGCP_DISABLE;
+#endif
 
 void do_segcp(void)
 {
@@ -53,7 +54,10 @@ void do_segcp(void)
 	uint16_t segcp_ret = 0;
 	
 	segcp_ret  = proc_SEGCP_udp(gSEGCPREQ, gSEGCPREP);
+
+#ifdef __USE_APPBOOT_TCP_SEARCH__
 	segcp_ret |= proc_SEGCP_tcp(gSEGCPREQ, gSEGCPREP);
+#endif
 	
 	if(segcp_ret & SEGCP_RET_ERR)
 	{
@@ -934,7 +938,7 @@ uint16_t proc_SEGCP_udp(uint8_t* segcp_req, uint8_t* segcp_rep)
 	return ret;
 }
 
-//#if 0
+#ifdef __USE_APPBOOT_TCP_SEARCH__
 
 uint16_t proc_SEGCP_tcp(uint8_t* segcp_req, uint8_t* segcp_rep)
 {
@@ -942,7 +946,7 @@ uint16_t proc_SEGCP_tcp(uint8_t* segcp_req, uint8_t* segcp_rep)
 	
 	uint16_t ret = 0;
 	uint16_t len = 0;
-//	uint16_t i = 0;
+
 	uint8_t tpar[SEGCP_PARAM_MAX+1];
 	uint8_t * treq;
 	uint8_t * trep;
@@ -1050,10 +1054,11 @@ void send_keepalive_packet_configtool(uint8_t sock)
 #endif 
 }
 
-//#endif
+#endif
 
 void segcp_timer_msec(void)
 {
+#ifdef __USE_APPBOOT_TCP_SEARCH__
 	if(enable_configtool_keepalive_timer)
 	{
 		if(configtool_keepalive_time < 0xFFFF) 	configtool_keepalive_time++;
@@ -1065,5 +1070,7 @@ void segcp_timer_msec(void)
 			configtool_keepalive_time = 0;
 		}
 	}
+#endif
+    ;
 }
 
