@@ -718,8 +718,8 @@ uint16_t proc_SEGCP(uint8_t* segcp_req, uint8_t* segcp_rep)
 						}
 						else
 						{
-							tmp_int = atoi(param);
-							dev_config->network_info[0].packing_delimiter[0] = (uint8_t)tmp_int;
+							str_to_hex(param, &tmp_byte);
+							dev_config->network_info[0].packing_delimiter[0] = tmp_byte;
 							
 							if(dev_config->network_info[0].packing_delimiter[0] == 0x00) 
 								dev_config->network_info[0].packing_delimiter_length = 0;
