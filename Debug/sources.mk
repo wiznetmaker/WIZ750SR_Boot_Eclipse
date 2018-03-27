@@ -27,19 +27,19 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-system/src/newlib \
-system/src/diag \
-system/src/cortexm \
-system/src/cmsis \
-system/src/W7500x \
-src \
-src/ioLibrary/MDIO \
-src/ioLibrary/Internet/httpServer \
-src/ioLibrary/Internet/DNS \
-src/ioLibrary/Internet/DHCP \
-src/ioLibrary/Ethernet \
-src/ioLibrary/Application/loopback \
-src/PlatformHandler \
-src/Configuration \
 src/Callback \
+src/Configuration \
+src/PlatformHandler \
+src \
+src/ioLibrary/Application/loopback \
+src/ioLibrary/Ethernet \
+src/ioLibrary/Internet/DHCP \
+src/ioLibrary/Internet/DNS \
+src/ioLibrary/Internet/httpServer \
+src/ioLibrary/MDIO \
+system/src/W7500x \
+system/src/cmsis \
+system/src/cortexm \
+system/src/diag \
+system/src/newlib \
 
