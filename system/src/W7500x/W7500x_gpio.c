@@ -238,8 +238,10 @@ void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
     assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
     assert_param(IS_GPIO_PIN(GPIO_Pin)); 
 
-    (GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = GPIO_Pin;
-    (GPIOx->UB_MASKED[(uint8_t)((GPIO_Pin)>>8)]) = GPIO_Pin;
+    if(GPIO_Pin < 256)
+    	(GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = 0xFFFF;
+    else
+    	(GPIOx->UB_MASKED[(uint8_t)((GPIO_Pin)>>8)]) = 0xFFFF;
 }
 
 void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
@@ -248,8 +250,10 @@ void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
     assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
     assert_param(IS_GPIO_PIN(GPIO_Pin));
 
-    (GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = ~(GPIO_Pin);
-    (GPIOx->UB_MASKED[(uint8_t)(GPIO_Pin>>8)]) = ~(GPIO_Pin);
+    if(GPIO_Pin < 256)
+    	(GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = 0x0;
+    else
+    	(GPIOx->UB_MASKED[(uint8_t)(GPIO_Pin>>8)]) = 0x0;
 }
 
 void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal)
@@ -259,8 +263,19 @@ void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal)
     assert_param(IS_GET_GPIO_PIN(GPIO_Pin));
     assert_param(IS_GPIO_BIT_ACTION(BitVal)); 
 
-    (GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = BitVal;
-    (GPIOx->UB_MASKED[(uint8_t)((GPIO_Pin)>>8)]) = BitVal;
+    if(GPIO_Pin < 256)
+    {
+    	if(BitVal)
+    		(GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = 0xFFFF;
+    	else
+    		(GPIOx->LB_MASKED[(uint8_t)(GPIO_Pin)]) = 0x0;
+    }else
+    {
+    	if(BitVal)
+    		(GPIOx->UB_MASKED[(uint8_t)((GPIO_Pin)>>8)]) = 0xFFFF;
+    	else
+    		(GPIOx->UB_MASKED[(uint8_t)((GPIO_Pin)>>8)]) = 0x0;
+    }
 }
 
 void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal)

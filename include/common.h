@@ -68,6 +68,7 @@
 #define WIZ750SR                2
 #define W7500P_S2E              3
 #define WIZ750SR_1xx            5
+#define WIZ752SR_12x			6		// James added. 2019-4-3
 #define UNKNOWN_DEVICE          0xff
 
 //////////////////////////////////
