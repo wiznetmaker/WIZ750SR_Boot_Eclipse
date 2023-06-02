@@ -1,13 +1,20 @@
 /**
   ******************************************************************************
   * @file    W7500x Serial to Ethernet Project - WIZ750SR Boot
-  * @author  Eric Jung, Team CS
-  * @version v1.2.2
-  * @date    Apr-2018
+  * @author  Irina Kim, Team network
+  * @version v1.2.8
+  * @date    Dec-2019
   * @brief   Boot program body
   ******************************************************************************
   * @attention
   * @par Revision history
+  *    <2019/12/03> v1.2.8 Bugfix and Improvements by irina
+  *    <2019/11/22> v1.2.7 Bugfix and Improvements by irina
+  *    <2019/10/11> v1.2.6 Bugfix and Improvements by irina
+  *						  Modified Packing time
+  *    <2019/09/19> v1.2.5 Bugfix and Improvements by Becky
+  *    <2018/06/22> v1.2.4 Bugfix by Eric Jung
+  *    <2018/04/27> v1.2.3 Bugfix and Improvements by Eric Jung
   *    <2018/04/12> v1.2.2 Bugfix by Eric Jung
   *    <2018/04/11> v1.2.2 Bugfix and Improvements by Eric Jung(Pre-released Ver.)
   *    <2018/03/26> v1.2.1 Bugfix by Eric Jung
@@ -30,7 +37,7 @@
   *
   * <h2><center>&copy; COPYRIGHT 2016 WIZnet Co., Ltd.</center></h2>
   ******************************************************************************
-  */ 
+  */
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdio.h>
@@ -99,6 +106,7 @@ uint8_t g_recv_buf[DATA_BUF_SIZE];
 
 uint8_t flag_s2e_application_running = OFF;
 uint8_t flag_process_dhcp_success = OFF;
+uint8_t flag_process_ip_success = OFF;
 
 /**
   * @brief  Main program
@@ -117,7 +125,7 @@ int main(void)
 	
 	/* W7500x MCU Initialization */
 	W7500x_Init(); // includes UART2 init code for debugging
-	
+
 	/* W7500x WZTOE (Hardwired TCP/IP stack) Initialization */
 	W7500x_WZTOE_Init();
 	
@@ -317,6 +325,7 @@ static void W7500x_Init(void)
 	
 	/* Set System init */
 	SystemInit_User(CLOCK_SOURCE_INTERNAL, PLL_SOURCE_8MHz, SYSTEM_CLOCK_8MHz);
+	delay(10); // delay for system clock stabilization
 	
 	/* Counter Initialization */
 	Time_Counter_Configuration(); // To replace the timer interrupt, inaccurate count value
