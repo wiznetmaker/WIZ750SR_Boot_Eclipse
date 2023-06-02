@@ -69,6 +69,7 @@
 
 #define DCHP_HOST_NAME           "WIZnet\0"
 
+
 /* 
  * @brief return value of @ref DHCP_run()
  */

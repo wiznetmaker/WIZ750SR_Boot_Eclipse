@@ -1,12 +1,12 @@
 /*******************************************************************************************************************************************************
- * Copyright ¡§I 2016 <WIZnet Co.,Ltd.> 
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ¢®¡ÆSoftware¢®¡¾), 
+ * Copyright ï¿½ï¿½I 2016 <WIZnet Co.,Ltd.> 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ï¿½ï¿½ï¿½ï¿½Softwareï¿½ï¿½ï¿½ï¿½), 
  * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
  * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  *
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
- * THE SOFTWARE IS PROVIDED ¢®¡ÆAS IS¢®¡¾, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * THE SOFTWARE IS PROVIDED ï¿½ï¿½ï¿½ï¿½AS ISï¿½ï¿½ï¿½ï¿½, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
  * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
@@ -204,7 +204,7 @@ typedef struct {
 uint8_t DHCP_SOCKET;                      // Socket number for DHCP
 
 uint8_t DHCP_SIP[4];                      // DHCP Server IP address
-
+uint8_t DHCP_REAL_SIP[4];                 // For extract my DHCP server in a few DHCP server
 // Network information from DHCP Server
 uint8_t OLD_allocated_ip[4]   = {0, };    // Previous IP address
 uint8_t DHCP_allocated_ip[4]  = {0, };    // IP address from DHCP
@@ -372,7 +372,14 @@ void send_DHCP_DISCOVER(void)
 #endif
 	
 	makeDHCPMSG();
-
+	DHCP_SIP[0]=0;
+   	DHCP_SIP[1]=0;
+  	DHCP_SIP[2]=0;
+   	DHCP_SIP[3]=0;
+   	DHCP_REAL_SIP[0]=0;
+   	DHCP_REAL_SIP[1]=0;
+   	DHCP_REAL_SIP[2]=0;
+   	DHCP_REAL_SIP[3]=0;
 	k = 4; // beacaue MAGIC_COOKIE already made by makeDHCPMSG()
 
 	// Option Request Param
@@ -425,7 +432,7 @@ void send_DHCP_DISCOVER(void)
 
 #ifdef _DHCP_DEBUG_
 	ret = sendto(DHCP_SOCKET, (uint8_t *)pDHCPMSG, RIP_MSG_SIZE, ip, DHCP_SERVER_PORT);
-	printf("> %d, %d\r\n", ret, RIP_MSG_SIZE);
+//	printf("> %d, %d\r\n", ret, RIP_MSG_SIZE);
 #else
 	sendto(DHCP_SOCKET, (uint8_t *)pDHCPMSG, RIP_MSG_SIZE, ip, DHCP_SERVER_PORT);
 #endif
@@ -603,7 +610,7 @@ int8_t parseDHCPMSG(void)
    if((len = getSn_RX_RSR(DHCP_SOCKET)) > 0)
    {
    	len = recvfrom(DHCP_SOCKET, (uint8_t *)pDHCPMSG, len, svr_addr, &svr_port);
-   #ifdef _DHCP_DEBUG_   
+   #ifdef _DHCP_DEBUG_DEEP_   
       printf("DHCP message : %d.%d.%d.%d(%d) %d received. \r\n",svr_addr[0],svr_addr[1],svr_addr[2], svr_addr[3],svr_port, len);
    #endif   
    }
@@ -614,7 +621,18 @@ int8_t parseDHCPMSG(void)
 		     (pDHCPMSG->chaddr[2] != DHCP_CHADDR[2]) || (pDHCPMSG->chaddr[3] != DHCP_CHADDR[3]) ||
 		     (pDHCPMSG->chaddr[4] != DHCP_CHADDR[4]) || (pDHCPMSG->chaddr[5] != DHCP_CHADDR[5])   )
          return 0;
-      type = 0;
+   
+	if((DHCP_SIP[0]!=0) || (DHCP_SIP[1]!=0) || (DHCP_SIP[2]!=0) || (DHCP_SIP[3]!=0)){
+        if( ((svr_addr[0]!=DHCP_SIP[0])|| (svr_addr[1]!=DHCP_SIP[1])|| (svr_addr[2]!=DHCP_SIP[2])|| (svr_addr[3]!=DHCP_SIP[3])) &&
+            ((svr_addr[0]!=DHCP_REAL_SIP[0])|| (svr_addr[1]!=DHCP_REAL_SIP[1])|| (svr_addr[2]!=DHCP_REAL_SIP[2])|| (svr_addr[3]!=DHCP_REAL_SIP[3]))  )
+        {
+#ifdef _DHCP_DEBUG_
+            printf("Another DHCP sever send a response message. This is ignored.\r\n");
+#endif
+            return 0;
+        }
+    } 
+        type = 0;
 		p = (uint8_t *)(&pDHCPMSG->op);
 		p = p + 240;      // 240 = sizeof(RIP_MSG) + MAGIC_COOKIE size in RIP_MSG.opt - sizeof(RIP_MSG.opt)
 		e = p + (len - 240);
@@ -667,9 +685,6 @@ int8_t parseDHCPMSG(void)
    				dhcp_lease_time  = (dhcp_lease_time << 8) + *p++;
    				dhcp_lease_time  = (dhcp_lease_time << 8) + *p++;
    				dhcp_lease_time  = (dhcp_lease_time << 8) + *p++;
-            #ifdef _DHCP_DEBUG_  
-               dhcp_lease_time = 10;
- 				#endif
    				break;
    			case dhcpServerIdentifier :
    				p++;
@@ -678,6 +693,12 @@ int8_t parseDHCPMSG(void)
    				DHCP_SIP[1] = *p++;
    				DHCP_SIP[2] = *p++;
    				DHCP_SIP[3] = *p++;
+				
+				DHCP_REAL_SIP[0]=svr_addr[0];
+                DHCP_REAL_SIP[1]=svr_addr[1];
+                DHCP_REAL_SIP[2]=svr_addr[2];
+                DHCP_REAL_SIP[3]=svr_addr[3];
+
    				break;
    			default :
    				p++;
@@ -694,11 +715,12 @@ uint8_t DHCP_run(void)
 {
 	uint8_t  type;
 	uint8_t  ret;
-
 	if(dhcp_state == STATE_DHCP_STOP) return DHCP_STOPPED;
 
-	if(getSn_SR(DHCP_SOCKET) != SOCK_UDP)
+	if(getSn_SR(DHCP_SOCKET) != SOCK_UDP){
 		socket(DHCP_SOCKET, Sn_MR_UDP, DHCP_CLIENT_PORT, 0x00);
+
+	}
 
 	ret = DHCP_RUNNING;
 	type = parseDHCPMSG();
@@ -759,7 +781,7 @@ uint8_t DHCP_run(void)
 		   ret = DHCP_IP_LEASED;
 			if ((dhcp_lease_time != INFINITE_LEASETIME) && ((dhcp_lease_time/2) < dhcp_tick_1s)) {
 				
-#ifdef _DHCP_DEBUG_
+#ifdef _DHCP_DEBUG_DEEP_
  				printf("> Maintains the IP address \r\n");
 #endif
 
@@ -794,7 +816,7 @@ uint8_t DHCP_run(void)
 					printf("> IP changed\r\n");
 #endif
 				}
-#ifdef _DHCP_DEBUG_
+#ifdef _DHCP_DEBUG_DEEP_
 				else printf("> IP is continued\r\n");
 #endif
 				reset_DHCP_timeout();
