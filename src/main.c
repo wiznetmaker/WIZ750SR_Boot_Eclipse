@@ -211,6 +211,16 @@ int main(void)
 #endif
 	}
 	
+	// 20230622 taylor
+#if 1
+	printf("\r\n");
+	printf("%s\r\n", STR_BAR);
+	printf(" %s \r\n", DEVICE_ID_DEFAULT);
+	printf(" >> Bootloader Compiled @ %s %s\r\n", __TIME__, __DATE__);
+	printf(" >> Firmware version: %d.%d.%d\r\n", MAJOR_VER, MINOR_VER, MAINTENANCE_VER);
+	printf("%s\r\n", STR_BAR);
+#endif
+
 	if(appjump_enable == ON)
 	{
 		application_jump(DEVICE_APP_MAIN_ADDR);
