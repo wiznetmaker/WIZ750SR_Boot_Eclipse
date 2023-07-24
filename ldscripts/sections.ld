@@ -345,6 +345,17 @@ SECTIONS
     } >RAM
     
     /*
+     * 20230626 taylor
+     * remap
+    */
+    .remap : ALIGN(4)
+    {
+    	*(.remap)
+    	*(.remaprodata)
+    	*(.remaprodata.*)
+    } > FLASH2
+    
+    /*
      * The FLASH Bank1.
      * The C or assembly source must explicitly place the code 
      * or data there using the "section" attribute.

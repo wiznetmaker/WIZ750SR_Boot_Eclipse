@@ -2,12 +2,13 @@
   ******************************************************************************
   * @file    W7500x Serial to Ethernet Project - WIZ750SR Boot
   * @author  Irina Kim, Team network
-  * @version v1.2.8
-  * @date    Dec-2019
+  * @version v1.3.3
+  * @date    July-2023
   * @brief   Boot program body
   ******************************************************************************
   * @attention
   * @par Revision history
+  *    <2023/07/24> v1.3.3 Version Update by Taylor
   *    <2019/12/03> v1.2.8 Bugfix and Improvements by irina
   *    <2019/11/22> v1.2.7 Bugfix and Improvements by irina
   *    <2019/10/11> v1.2.6 Bugfix and Improvements by irina
@@ -143,17 +144,22 @@ int main(void)
 	// W7500x Application: Check the MAC address and Firmware update
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	// 1. MAC address°¡ ¾ø´Â °æ¿ì				-> MAC ÁÖ¼Ò ÀÔ·Â ¹× save
+	// 1. MAC addressï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½				-> MAC ï¿½Ö¼ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ save
 	
 	if(check_mac_address())
 	{
+		// 20230622 taylor
+		#if 0
 		Copy_Interrupt_VectorTable(DEVICE_APP_MAIN_ADDR);
 		delay(SAVE_INTERVAL_MS/2);
+		#else
+		__enable_irq();
+		#endif
 
 		appjump_enable = ON;
 	}
 	
-	// 2. Firmware update flag°¡ 1ÀÎ °æ¿ì 		-> ÀüÃ¼ ¿µ¿ª erase, Fwup_size¸¸Å­ fw update ¼öÇà, app backup (flash) >> app main (flash)
+	// 2. Firmware update flagï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ 		-> ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ erase, Fwup_sizeï¿½ï¿½Å­ fw update ï¿½ï¿½ï¿½ï¿½, app backup (flash) >> app main (flash)
 	
 	if(dev_config->firmware_update.fwup_flag == 1)
 	{
@@ -168,11 +174,16 @@ int main(void)
 		dev_config->network_info[0].state = ST_OPEN;
 		save_DevConfig_to_storage();
 		
+		// 20230622 taylor
+		#if 0
 		if(ret == DEVICE_FWUP_RET_SUCCESS)
 		{
 			Copy_Interrupt_VectorTable(DEVICE_APP_MAIN_ADDR);
 			delay(SAVE_INTERVAL_MS/2);
 		}
+		#else
+		__enable_irq();
+		#endif
 		appjump_enable = ON;
 	}
 	
